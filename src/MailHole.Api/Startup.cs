@@ -27,11 +27,22 @@ namespace MailHole.Api
             services.TryAddTransient<IDatabaseAsync>(provider =>
                 provider.GetService<IConnectionMultiplexer>().GetDatabase(Configuration.GetRedisDatabaseNumber())
             );
+
+            services.AddSwaggerGen(swagger =>
+            {
+                swagger.SwaggerDoc("v1", new Swashbuckle.AspNetCore.Swagger.Info { Title = "MailHole API" });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "MailHole API");
+            });
+
             app.UseMvc();
         }
     }
