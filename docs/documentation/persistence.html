@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>MailHole documentation </title>
+    <title>Persistence layer </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="MailHole documentation ">
+    <meta name="title" content="Persistence layer ">
     <meta name="generator" content="docfx 2.31.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -82,12 +82,12 @@
                 <div class="toc" id="toc">
                   
                   <ul class="nav level1">
-                    <li class="active">
-                      <a href="intro.html" title="Introduction" class="active">Introduction</a>
-                    </li>
                     <li class="">
+                      <a href="intro.html" title="Introduction" class="">Introduction</a>
+                    </li>
+                    <li class="active">
                       <span class="expand-stub"></span>
-                      <a href="persistence.html" title="Persistence" class="">Persistence</a>
+                      <a href="persistence.html" title="Persistence" class="active">Persistence</a>
                         
                         <ul class="nav level2">
                           <li class="">
@@ -105,31 +105,12 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="mailhole-documentation">MailHole documentation</h1>
+<h1 id="persistence-layer">Persistence layer</h1>
 
-<h2 id="features">Features</h2>
+<p>MailHole uses two datastores to persist the data:</p>
 <ul>
-<li>Keep mails for a specified time or until they are deleted</li>
-<li>Store whole mail including headers, text and HTML body</li>
-<li>Store mail attachements including some file hashes (planned are MD5, SHA1 and SHA256)</li>
-<li>Dashboard to browse all the received mails, attachements and so on</li>
-<li>Dashboard to have a look at the processing queue</li>
-<li>Dashboard to get some metrics of the service like how many mails were received, ...</li>
-<li>API to check if an attachement was transmitted correctly by passing a prebuilt hash to API or by fetching the attachement details including its hashes</li>
-</ul>
-<h2 id="architecture">Architecture</h2>
-<h3 id="application-parts">Application parts</h3>
-<ul>
-<li>MailHole.SmtpListener - Service which receives mails and stores them for further processing</li>
-<li>MailHole.Api - WebAPI project to access receiver and attachement informations and statistics</li>
-</ul>
-<h3 id="external-tools-and-frameworks">External tools and frameworks</h3>
-<ul>
-<li><a href="https://redis.io">Redis</a> - used to store all metadata and text parts of the mails</li>
-<li><a href="https://minio.io">Minio</a> - Amazon S3 replacement to store all attachements</li>
-<li><a href="https://traefik.io">Traefik</a> - API Gateway and load balancer used to serve a consistent API</li>
-<li><a href="https://www.hangfire.io">Hangfire</a> - used to delete mails after specific time and for asynchronous processing of incoming mails</li>
-<li><a href="https://www.app-metrics.io">App-Metrics</a> - used to collect performance indicators and health state of the custom components</li>
+<li><a href="persistence/redis.html">Redis</a></li>
+<li><a href="persistence/minio.html">Minio</a></li>
 </ul>
 </article>
           </div>
@@ -139,7 +120,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/baez90/MailHole/blob/master/docs-src/documentation/intro.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/baez90/MailHole/blob/master/docs-src/documentation/persistence.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

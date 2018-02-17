@@ -1,1 +1,347 @@
-﻿{"swagger":"2.0","info":{"title":"MailHole API"},"basePath":"/","paths":{"/api/v1/{receiverAddress}/mails/{mailGuid}/attachements/{attachementGuid}":{"get":{"tags":["Attachements"],"summary":"Get details of attachement like MIME type, hashes, download link, ...","operationId":"ApiV1ByReceiverAddressMailsByMailGuidAttachementsByAttachementGuidGet","consumes":[],"produces":["text/plain","application/json","text/json"],"parameters":[{"name":"receiverAddress","in":"path","description":"Mail address of the original receiver","required":true,"type":"string"},{"name":"mailGuid","in":"path","description":"GUID that was assigned to the mail by MailHole","required":true,"type":"string","format":"uuid"},{"name":"attachementGuid","in":"path","description":"GUID that was assigned to the attachement by MailHole","required":true,"type":"string","format":"uuid"}],"responses":{"200":{"description":"Found attachement","schema":{"$ref":"#/definitions/AttachementInfo"}},"400":{"description":"Any error with the specified parameters"},"404":{"description":"Parameters were ok but no matching attachement was found"}}},"put":{"tags":["Attachements"],"summary":"Checks whether attachment was transferred successfully","operationId":"ApiV1ByReceiverAddressMailsByMailGuidAttachementsByAttachementGuidPut","consumes":["application/json-patch+json","application/json","text/json","application/*+json"],"produces":[],"parameters":[{"name":"receiverAddress","in":"path","required":true,"type":"string"},{"name":"mailGuid","in":"path","required":true,"type":"string","format":"uuid"},{"name":"attachementGuid","in":"path","required":true,"type":"string","format":"uuid"},{"name":"validationRequest","in":"body","required":false,"schema":{"$ref":"#/definitions/ValidationRequest"}}],"responses":{"200":{"description":"Success"},"400":{"description":"Bad Request"},"404":{"description":"Not Found"},"409":{"description":"Conflict"}}}},"/api/v1/{receiverAddress}/mails":{"get":{"tags":["Mails"],"operationId":"ApiV1ByReceiverAddressMailsGet","consumes":[],"produces":["text/plain","application/json","text/json"],"parameters":[{"name":"receiverAddress","in":"path","required":true,"type":"string"},{"name":"offset","in":"query","required":true,"type":"integer","format":"int32"},{"name":"pageSize","in":"query","required":true,"type":"integer","format":"int32"}],"responses":{"200":{"description":"Success","schema":{"type":"array","items":{"type":"string"}}},"400":{"description":"Bad Request"},"404":{"description":"Not Found"},"500":{"description":"Server Error"}}}},"/api/v1/{receiverAddress}/mails/count":{"get":{"tags":["Mails"],"operationId":"ApiV1ByReceiverAddressMailsCountGet","consumes":[],"produces":["text/plain","application/json","text/json"],"parameters":[{"name":"receiverAddress","in":"path","required":true,"type":"string"}],"responses":{"200":{"description":"Success","schema":{"$ref":"#/definitions/CountResult"}},"400":{"description":"Bad Request"},"404":{"description":"Not Found"},"500":{"description":"Server Error"}}}},"/api/v1/{receiverAddress}/mails/{mailGuid}":{"get":{"tags":["Mails"],"operationId":"ApiV1ByReceiverAddressMailsByMailGuidGet","consumes":[],"produces":["text/plain","application/json","text/json"],"parameters":[{"name":"receiverAddress","in":"path","required":true,"type":"string"},{"name":"mailGuid","in":"path","required":true,"type":"string","format":"uuid"}],"responses":{"200":{"description":"Success","schema":{"$ref":"#/definitions/ReceivedMail"}},"400":{"description":"Bad Request"},"404":{"description":"Not Found"},"500":{"description":"Server Error"}}},"delete":{"tags":["Mails"],"operationId":"ApiV1ByReceiverAddressMailsByMailGuidDelete","consumes":[],"produces":["text/plain","application/json","text/json"],"parameters":[{"name":"receiverAddress","in":"path","required":true,"type":"string"},{"name":"mailGuid","in":"path","required":true,"type":"string","format":"uuid"}],"responses":{"200":{"description":"Success","schema":{"$ref":"#/definitions/ReceivedMail"}},"400":{"description":"Bad Request"},"404":{"description":"Not Found"},"500":{"description":"Server Error"}}}},"/api/v1/{receiverAddress}":{"get":{"tags":["Receivers"],"operationId":"ApiV1ByReceiverAddressGet","consumes":[],"produces":["text/plain","application/json","text/json"],"parameters":[{"name":"receiverAddress","in":"path","required":true,"type":"string"}],"responses":{"200":{"description":"Success","schema":{"$ref":"#/definitions/Receiver"}},"400":{"description":"Bad Request"},"500":{"description":"Server Error"}}}}},"definitions":{"AttachementInfo":{"type":"object","properties":{}},"ValidationRequest":{"type":"object","properties":{"hashType":{"type":"string"},"hashToValidate":{"type":"string"}}},"CountResult":{"type":"object","properties":{}},"ReceivedMail":{"type":"object","properties":{"sender":{"type":"string"},"bcc":{"type":"array","items":{"type":"string"}},"cc":{"type":"array","items":{"type":"string"}},"subject":{"type":"string"},"htmlBody":{"type":"string"},"textBody":{"type":"string"},"headers":{"type":"object","additionalProperties":{"type":"string"}},"utcReceivedTime":{"format":"date-time","type":"string"},"attachements":{"type":"array","items":{"type":"string"}}}},"Receiver":{"type":"object","properties":{}}},"securityDefinitions":{}}
+﻿{
+    "swagger": "2.0",
+    "info": {
+        "title": "MailHole API"
+    },
+    "basePath": "/",
+    "paths": {
+        "/api/v1/{receiverAddress}/mails/{mailGuid}/attachements/{attachementGuid}": {
+            "get": {
+                "tags": ["Attachements"],
+                "summary": "Get details of attachement like MIME type, hashes, download link, ...",
+                "operationId": "ApiV1ByReceiverAddressMailsByMailGuidAttachementsByAttachementGuidGet",
+                "consumes": [],
+                "produces": ["text/plain", "application/json", "text/json"],
+                "parameters": [{
+                    "name": "receiverAddress",
+                    "in": "path",
+                    "description": "Mail address of the original receiver",
+                    "required": true,
+                    "type": "string"
+                }, {
+                    "name": "mailGuid",
+                    "in": "path",
+                    "description": "GUID that was assigned to the mail by MailHole",
+                    "required": true,
+                    "type": "string",
+                    "format": "uuid"
+                }, {
+                    "name": "attachementGuid",
+                    "in": "path",
+                    "description": "GUID that was assigned to the attachement by MailHole",
+                    "required": true,
+                    "type": "string",
+                    "format": "uuid"
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Found attachement",
+                        "schema": {
+                            "$ref": "#/definitions/AttachementInfo"
+                        }
+                    },
+                    "400": {
+                        "description": "Any error with the specified parameters"
+                    },
+                    "404": {
+                        "description": "Parameters were ok but no matching attachement was found"
+                    }
+                }
+            },
+            "put": {
+                "tags": ["Attachements"],
+                "summary": "Checks whether attachment was transferred successfully",
+                "operationId": "ApiV1ByReceiverAddressMailsByMailGuidAttachementsByAttachementGuidPut",
+                "consumes": ["application/json-patch+json", "application/json", "text/json", "application/*+json"],
+                "produces": [],
+                "parameters": [{
+                    "name": "receiverAddress",
+                    "in": "path",
+                    "required": true,
+                    "type": "string"
+                }, {
+                    "name": "mailGuid",
+                    "in": "path",
+                    "required": true,
+                    "type": "string",
+                    "format": "uuid"
+                }, {
+                    "name": "attachementGuid",
+                    "in": "path",
+                    "required": true,
+                    "type": "string",
+                    "format": "uuid"
+                }, {
+                    "name": "validationRequest",
+                    "in": "body",
+                    "required": false,
+                    "schema": {
+                        "$ref": "#/definitions/ValidationRequest"
+                    }
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "409": {
+                        "description": "Conflict"
+                    }
+                }
+            }
+        },
+        "/api/v1/{receiverAddress}/mails": {
+            "get": {
+                "tags": ["Mails"],
+                "operationId": "ApiV1ByReceiverAddressMailsGet",
+                "consumes": [],
+                "produces": ["text/plain", "application/json", "text/json"],
+                "parameters": [{
+                    "name": "receiverAddress",
+                    "in": "path",
+                    "required": true,
+                    "type": "string"
+                }, {
+                    "name": "offset",
+                    "in": "query",
+                    "required": true,
+                    "type": "integer",
+                    "format": "int32"
+                }, {
+                    "name": "pageSize",
+                    "in": "query",
+                    "required": true,
+                    "type": "integer",
+                    "format": "int32"
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "500": {
+                        "description": "Server Error"
+                    }
+                }
+            }
+        },
+        "/api/v1/{receiverAddress}/mails/count": {
+            "get": {
+                "tags": ["Mails"],
+                "operationId": "ApiV1ByReceiverAddressMailsCountGet",
+                "consumes": [],
+                "produces": ["text/plain", "application/json", "text/json"],
+                "parameters": [{
+                    "name": "receiverAddress",
+                    "in": "path",
+                    "required": true,
+                    "type": "string"
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/CountResult"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "500": {
+                        "description": "Server Error"
+                    }
+                }
+            }
+        },
+        "/api/v1/{receiverAddress}/mails/{mailGuid}": {
+            "get": {
+                "tags": ["Mails"],
+                "operationId": "ApiV1ByReceiverAddressMailsByMailGuidGet",
+                "consumes": [],
+                "produces": ["text/plain", "application/json", "text/json"],
+                "parameters": [{
+                    "name": "receiverAddress",
+                    "in": "path",
+                    "required": true,
+                    "type": "string"
+                }, {
+                    "name": "mailGuid",
+                    "in": "path",
+                    "required": true,
+                    "type": "string",
+                    "format": "uuid"
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/ReceivedMail"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "500": {
+                        "description": "Server Error"
+                    }
+                }
+            },
+            "delete": {
+                "tags": ["Mails"],
+                "operationId": "ApiV1ByReceiverAddressMailsByMailGuidDelete",
+                "consumes": [],
+                "produces": ["text/plain", "application/json", "text/json"],
+                "parameters": [{
+                    "name": "receiverAddress",
+                    "in": "path",
+                    "required": true,
+                    "type": "string"
+                }, {
+                    "name": "mailGuid",
+                    "in": "path",
+                    "required": true,
+                    "type": "string",
+                    "format": "uuid"
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/ReceivedMail"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "500": {
+                        "description": "Server Error"
+                    }
+                }
+            }
+        },
+        "/api/v1/{receiverAddress}": {
+            "get": {
+                "tags": ["Receivers"],
+                "operationId": "ApiV1ByReceiverAddressGet",
+                "consumes": [],
+                "produces": ["text/plain", "application/json", "text/json"],
+                "parameters": [{
+                    "name": "receiverAddress",
+                    "in": "path",
+                    "required": true,
+                    "type": "string"
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/Receiver"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "500": {
+                        "description": "Server Error"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "AttachementInfo": {
+            "type": "object",
+            "properties": {}
+        },
+        "ValidationRequest": {
+            "type": "object",
+            "properties": {
+                "hashType": {
+                    "type": "string"
+                },
+                "hashToValidate": {
+                    "type": "string"
+                }
+            }
+        },
+        "CountResult": {
+            "type": "object",
+            "properties": {}
+        },
+        "ReceivedMail": {
+            "type": "object",
+            "properties": {
+                "sender": {
+                    "type": "string"
+                },
+                "bcc": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "cc": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "subject": {
+                    "type": "string"
+                },
+                "htmlBody": {
+                    "type": "string"
+                },
+                "textBody": {
+                    "type": "string"
+                },
+                "headers": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "string"
+                    }
+                },
+                "utcReceivedTime": {
+                    "format": "date-time",
+                    "type": "string"
+                },
+                "attachements": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "Receiver": {
+            "type": "object",
+            "properties": {}
+        }
+    },
+    "securityDefinitions": {}
+}
