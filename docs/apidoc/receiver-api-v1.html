@@ -1,0 +1,708 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>MailHole API </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="MailHole API ">
+    <meta name="generator" content="docfx 2.31.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc">
+    <meta property="docfx:tocrel" content="toc">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+                <ul class="nav level1 navbar-nav">
+                  <li class="">
+                    <a href="../documentation/intro.html" title="Documentation" class="">Documentation</a>
+                  </li>
+                  <li class="">
+                    <a href="../api/index.html" title="API Reference" class="">API Reference</a>
+                  </li>
+                  <li class="active">
+                    <a href="../apidoc/receiver-api-v1.html" title="REST API" class="active">REST API</a>
+                  </li>
+                </ul>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div>
+              <div class="sidefilter">
+                <form class="toc-filter">
+                  <span class="glyphicon glyphicon-filter filter-icon"></span>
+                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+                </form>
+              </div>
+              <div class="sidetoc">
+                <div class="toc" id="toc">
+                  
+                  <ul class="nav level1">
+                    <li class="active">
+                      <a href="receiver-api-v1.html" title="Receiver API V1" class="active">Receiver API V1</a>
+                    </li>
+                  </ul>        </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="/MailHole API">
+
+<h1 id="_MailHole_API" data-uid="/MailHole API" class="text-capitalize text-break">MailHole API</h1>
+<h2 id="_MailHole_API">Attachements</h2>
+  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/baez90/MailHole/new/master/apiSpec/new?filename=MailHole_API_ApiV1ByReceiverAddressMailsByMailGuidAttachementsByAttachementGuidGet.md&amp;value=---%0Auid%3A%20MailHole%20API%2FApiV1ByReceiverAddressMailsByMailGuidAttachementsByAttachementGuidGet%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/baez90/MailHole/blob/master/docs-src/apidoc/receiver-api-v1.json/#L1">View Source</a>
+  </span>
+   <h3 id="MailHole_API_ApiV1ByReceiverAddressMailsByMailGuidAttachementsByAttachementGuidGet" data-uid="MailHole API/ApiV1ByReceiverAddressMailsByMailGuidAttachementsByAttachementGuidGet" class="text-capitalize">ApiV1ByReceiverAddressMailsByMailGuidAttachementsByAttachementGuidGet</h3>
+  <div class="markdown level1 summary"><p>Get details of attachement like MIME type, hashes, download link, ...</p>
+</div>
+  <h5>Request</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-restApi hljs">GET /api/v1/{receiverAddress}/mails/{mailGuid}/attachements/{attachementGuid}</code></pre>
+  </div>
+  <h5>Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Value</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">*receiverAddress</span></td>
+        <td>string</td>
+        <td></td>
+        <td><p>Mail address of the original receiver</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">*mailGuid</span></td>
+        <td>string</td>
+        <td></td>
+        <td><p>GUID that was assigned to the mail by MailHole</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">*attachementGuid</span></td>
+        <td>string</td>
+        <td></td>
+        <td><p>GUID that was assigned to the attachement by MailHole</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="responses">
+    <h5>Responses</h5>
+    <table class="table table-bordered table-striped table-condensed">
+      <thead>
+        <tr>
+          <th>Status Code</th>
+          <th>Description</th>
+          <th>Samples</th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><span class="status">200</span></td>
+        <td><p>Found attachement</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">400</span></td>
+        <td><p>Any error with the specified parameters</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">404</span></td>
+        <td><p>Parameters were ok but no matching attachement was found</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/baez90/MailHole/new/master/apiSpec/new?filename=MailHole_API_ApiV1ByReceiverAddressMailsByMailGuidAttachementsByAttachementGuidPut.md&amp;value=---%0Auid%3A%20MailHole%20API%2FApiV1ByReceiverAddressMailsByMailGuidAttachementsByAttachementGuidPut%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/baez90/MailHole/blob/master/docs-src/apidoc/receiver-api-v1.json/#L1">View Source</a>
+  </span>
+   <h3 id="MailHole_API_ApiV1ByReceiverAddressMailsByMailGuidAttachementsByAttachementGuidPut" data-uid="MailHole API/ApiV1ByReceiverAddressMailsByMailGuidAttachementsByAttachementGuidPut" class="text-capitalize">ApiV1ByReceiverAddressMailsByMailGuidAttachementsByAttachementGuidPut</h3>
+  <div class="markdown level1 summary"><p>Checks whether attachment was transferred successfully</p>
+</div>
+  <h5>Request</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-restApi hljs">PUT /api/v1/{receiverAddress}/mails/{mailGuid}/attachements/{attachementGuid}</code></pre>
+  </div>
+  <h5>Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Value</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">*receiverAddress</span></td>
+        <td>string</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">*mailGuid</span></td>
+        <td>string</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">*attachementGuid</span></td>
+        <td>string</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">validationRequest</span></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="responses">
+    <h5>Responses</h5>
+    <table class="table table-bordered table-striped table-condensed">
+      <thead>
+        <tr>
+          <th>Status Code</th>
+          <th>Description</th>
+          <th>Samples</th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><span class="status">200</span></td>
+        <td><p>Success</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">400</span></td>
+        <td><p>Bad Request</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">404</span></td>
+        <td><p>Not Found</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">409</span></td>
+        <td><p>Conflict</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+<h2 id="_MailHole_API">Mails</h2>
+  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/baez90/MailHole/new/master/apiSpec/new?filename=MailHole_API_ApiV1ByReceiverAddressMailsGet.md&amp;value=---%0Auid%3A%20MailHole%20API%2FApiV1ByReceiverAddressMailsGet%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/baez90/MailHole/blob/master/docs-src/apidoc/receiver-api-v1.json/#L1">View Source</a>
+  </span>
+   <h3 id="MailHole_API_ApiV1ByReceiverAddressMailsGet" data-uid="MailHole API/ApiV1ByReceiverAddressMailsGet" class="text-capitalize">ApiV1ByReceiverAddressMailsGet</h3>
+  <h5>Request</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-restApi hljs">GET /api/v1/{receiverAddress}/mails?offset&amp;pageSize</code></pre>
+  </div>
+  <h5>Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Value</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">*receiverAddress</span></td>
+        <td>string</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">*offset</span></td>
+        <td>integer</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">*pageSize</span></td>
+        <td>integer</td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="responses">
+    <h5>Responses</h5>
+    <table class="table table-bordered table-striped table-condensed">
+      <thead>
+        <tr>
+          <th>Status Code</th>
+          <th>Description</th>
+          <th>Samples</th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><span class="status">200</span></td>
+        <td><p>Success</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">400</span></td>
+        <td><p>Bad Request</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">404</span></td>
+        <td><p>Not Found</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">500</span></td>
+        <td><p>Server Error</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/baez90/MailHole/new/master/apiSpec/new?filename=MailHole_API_ApiV1ByReceiverAddressMailsCountGet.md&amp;value=---%0Auid%3A%20MailHole%20API%2FApiV1ByReceiverAddressMailsCountGet%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/baez90/MailHole/blob/master/docs-src/apidoc/receiver-api-v1.json/#L1">View Source</a>
+  </span>
+   <h3 id="MailHole_API_ApiV1ByReceiverAddressMailsCountGet" data-uid="MailHole API/ApiV1ByReceiverAddressMailsCountGet" class="text-capitalize">ApiV1ByReceiverAddressMailsCountGet</h3>
+  <h5>Request</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-restApi hljs">GET /api/v1/{receiverAddress}/mails/count</code></pre>
+  </div>
+  <h5>Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Value</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">*receiverAddress</span></td>
+        <td>string</td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="responses">
+    <h5>Responses</h5>
+    <table class="table table-bordered table-striped table-condensed">
+      <thead>
+        <tr>
+          <th>Status Code</th>
+          <th>Description</th>
+          <th>Samples</th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><span class="status">200</span></td>
+        <td><p>Success</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">400</span></td>
+        <td><p>Bad Request</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">404</span></td>
+        <td><p>Not Found</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">500</span></td>
+        <td><p>Server Error</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/baez90/MailHole/new/master/apiSpec/new?filename=MailHole_API_ApiV1ByReceiverAddressMailsByMailGuidGet.md&amp;value=---%0Auid%3A%20MailHole%20API%2FApiV1ByReceiverAddressMailsByMailGuidGet%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/baez90/MailHole/blob/master/docs-src/apidoc/receiver-api-v1.json/#L1">View Source</a>
+  </span>
+   <h3 id="MailHole_API_ApiV1ByReceiverAddressMailsByMailGuidGet" data-uid="MailHole API/ApiV1ByReceiverAddressMailsByMailGuidGet" class="text-capitalize">ApiV1ByReceiverAddressMailsByMailGuidGet</h3>
+  <h5>Request</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-restApi hljs">GET /api/v1/{receiverAddress}/mails/{mailGuid}</code></pre>
+  </div>
+  <h5>Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Value</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">*receiverAddress</span></td>
+        <td>string</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">*mailGuid</span></td>
+        <td>string</td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="responses">
+    <h5>Responses</h5>
+    <table class="table table-bordered table-striped table-condensed">
+      <thead>
+        <tr>
+          <th>Status Code</th>
+          <th>Description</th>
+          <th>Samples</th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><span class="status">200</span></td>
+        <td><p>Success</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">400</span></td>
+        <td><p>Bad Request</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">404</span></td>
+        <td><p>Not Found</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">500</span></td>
+        <td><p>Server Error</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/baez90/MailHole/new/master/apiSpec/new?filename=MailHole_API_ApiV1ByReceiverAddressMailsByMailGuidDelete.md&amp;value=---%0Auid%3A%20MailHole%20API%2FApiV1ByReceiverAddressMailsByMailGuidDelete%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/baez90/MailHole/blob/master/docs-src/apidoc/receiver-api-v1.json/#L1">View Source</a>
+  </span>
+   <h3 id="MailHole_API_ApiV1ByReceiverAddressMailsByMailGuidDelete" data-uid="MailHole API/ApiV1ByReceiverAddressMailsByMailGuidDelete" class="text-capitalize">ApiV1ByReceiverAddressMailsByMailGuidDelete</h3>
+  <h5>Request</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-restApi hljs">DELETE /api/v1/{receiverAddress}/mails/{mailGuid}</code></pre>
+  </div>
+  <h5>Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Value</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">*receiverAddress</span></td>
+        <td>string</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">*mailGuid</span></td>
+        <td>string</td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="responses">
+    <h5>Responses</h5>
+    <table class="table table-bordered table-striped table-condensed">
+      <thead>
+        <tr>
+          <th>Status Code</th>
+          <th>Description</th>
+          <th>Samples</th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><span class="status">200</span></td>
+        <td><p>Success</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">400</span></td>
+        <td><p>Bad Request</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">404</span></td>
+        <td><p>Not Found</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">500</span></td>
+        <td><p>Server Error</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+<h2 id="_MailHole_API">Receivers</h2>
+  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/baez90/MailHole/new/master/apiSpec/new?filename=MailHole_API_ApiV1ByReceiverAddressGet.md&amp;value=---%0Auid%3A%20MailHole%20API%2FApiV1ByReceiverAddressGet%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/baez90/MailHole/blob/master/docs-src/apidoc/receiver-api-v1.json/#L1">View Source</a>
+  </span>
+   <h3 id="MailHole_API_ApiV1ByReceiverAddressGet" data-uid="MailHole API/ApiV1ByReceiverAddressGet" class="text-capitalize">ApiV1ByReceiverAddressGet</h3>
+  <h5>Request</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-restApi hljs">GET /api/v1/{receiverAddress}</code></pre>
+  </div>
+  <h5>Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Value</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">*receiverAddress</span></td>
+        <td>string</td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="responses">
+    <h5>Responses</h5>
+    <table class="table table-bordered table-striped table-condensed">
+      <thead>
+        <tr>
+          <th>Status Code</th>
+          <th>Description</th>
+          <th>Samples</th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><span class="status">200</span></td>
+        <td><p>Success</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">400</span></td>
+        <td><p>Bad Request</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">500</span></td>
+        <td><p>Server Error</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/baez90/MailHole/new/master/apiSpec/new?filename=_MailHole_API.md&amp;value=---%0Auid%3A%20%2FMailHole%20API%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/baez90/MailHole/blob/master/docs-src/apidoc/receiver-api-v1.json/#L1" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

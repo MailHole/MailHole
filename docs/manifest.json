@@ -1,0 +1,373 @@
+{
+  "homepages": [],
+  "source_base_path": "D:/Sources/Github/MailHole/docs-src",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MailHole.Api.Controllers.AttachementsController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MailHole.Api.Controllers.AttachementsController.html",
+          "hash": "7d86nPPaGM25ASbJocf02w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MailHole.Api.Controllers.MailsController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MailHole.Api.Controllers.MailsController.html",
+          "hash": "oqUcfB5T9vDo9/3sZwyrCw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MailHole.Api.Controllers.ReceiversController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MailHole.Api.Controllers.ReceiversController.html",
+          "hash": "8YKs6K1a+zOlOljsRY85cw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MailHole.Api.Controllers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MailHole.Api.Controllers.html",
+          "hash": "drjVQLlmPEeg296FkePRBA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MailHole.Api.Models.CountResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MailHole.Api.Models.CountResult.html",
+          "hash": "mrRJbXUEFo5jUG2l+7i5FQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MailHole.Api.Models.Validation.ValidationRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MailHole.Api.Models.Validation.ValidationRequest.html",
+          "hash": "CzgLNldHTcw976CTUD6aGg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MailHole.Api.Models.Validation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MailHole.Api.Models.Validation.html",
+          "hash": "c1OrCkQwGPb1gstZ4H7KqQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MailHole.Api.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MailHole.Api.Models.html",
+          "hash": "H3SbjSCjStV19YZocjTTOg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MailHole.Api.Program.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MailHole.Api.Program.html",
+          "hash": "I9eaoX2F8DZOSt/rUg2pag=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MailHole.Api.Startup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MailHole.Api.Startup.html",
+          "hash": "dRT8BcXsjXrZyass2Sy4aQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MailHole.Api.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MailHole.Api.html",
+          "hash": "VxQPS5bkwAB1l4VqJXAWng=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MailHole.Common.Extensions.ConfigExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MailHole.Common.Extensions.ConfigExtensions.html",
+          "hash": "Ib/G70/WXiyHm/61S8UqlQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MailHole.Common.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MailHole.Common.Extensions.html",
+          "hash": "8Gvw+EqO8BJIKWcJ/v8VDA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MailHole.Common.Model.AttachementInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MailHole.Common.Model.AttachementInfo.html",
+          "hash": "/V6ALrVwi+j02E/G3lxKaw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MailHole.Common.Model.ReceivedMail.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MailHole.Common.Model.ReceivedMail.html",
+          "hash": "DrBSY8hO5dwUDL2dbsLj/A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MailHole.Common.Model.Receiver.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MailHole.Common.Model.Receiver.html",
+          "hash": "mfwwtwYkO0qTZMUamDxikQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MailHole.Common.Model.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MailHole.Common.Model.html",
+          "hash": "tqS3P36e0Crh4/mfcLilrQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MailHole.SmtpListener.Extensions.ModelExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MailHole.SmtpListener.Extensions.ModelExtensions.html",
+          "hash": "KcaJBOlRuZaujP1CajUkLQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MailHole.SmtpListener.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MailHole.SmtpListener.Extensions.html",
+          "hash": "madTGNIX0zcTKFrDhnQxMg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MailHole.SmtpListener.Persistence.RedisMinioMailStore.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MailHole.SmtpListener.Persistence.RedisMinioMailStore.html",
+          "hash": "7Hzcnm3P0x5ODqzvb8CA1A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MailHole.SmtpListener.Persistence.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MailHole.SmtpListener.Persistence.html",
+          "hash": "s80+0ADsvempUROEYUFHWQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MailHole.SmtpListener.Program.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MailHole.SmtpListener.Program.html",
+          "hash": "agBH0VYWWdL/ypZ1RQ10hQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MailHole.SmtpListener.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MailHole.SmtpListener.html",
+          "hash": "rVl98LJ0ztzzuRMMTzicQQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "LmXDKyCpDgvJt6J8GSf9iw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "apidoc/receiver-api-v1.json",
+      "output": {
+        ".html": {
+          "relative_path": "apidoc/receiver-api-v1.html",
+          "hash": "1L8ucyjbcHW3M8jVk5Eb8Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "documentation/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/intro.html",
+          "hash": "ElUSS01/wgJigVnh+gJtNg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "zr/4bU7K2B6KU06DPj4pPA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build"
+      },
+      "processors": {
+        "RestApiDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor RestApiDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build"
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build"
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing"
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
