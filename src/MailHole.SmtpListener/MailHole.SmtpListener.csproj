@@ -21,8 +21,5 @@
     <Content Include="..\MailHole.SmtpListener-Debug.dockerfile">
       <Link>MailHole.SmtpListener-Debug.dockerfile</Link>
     </Content>
-    <Content Include="..\MailHole.SmtpListener-Release.dockerfile">
-      <Link>MailHole.SmtpListener-Release.dockerfile</Link>
-    </Content>
   </ItemGroup>
 </Project>

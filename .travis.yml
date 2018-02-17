@@ -1,0 +1,8 @@
+language: csharp
+mono: none
+donet: 2.1.4
+script:
+  - cd src/
+  - dotnet restore
+  - dotnet build
+  - dotnet test

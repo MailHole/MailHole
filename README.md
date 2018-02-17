@@ -1,5 +1,8 @@
 # MailHole
 
+[![Build status](https://ci.appveyor.com/api/projects/status/u5hn3f0v3xfd5rya?svg=true)](https://ci.appveyor.com/project/PeterKurfer/mailhole)
+
+
 ## Docs
 
 You can find the docs at the [GitHub Pages](https://baez90.github.io/MailHole) of this project.
