@@ -1,0 +1,17 @@
+defaultEntryPoints = ["http"]
+debug = true
+logLevel = "DEBUG"
+
+[traefikLog]
+
+[accessLog]
+
+[entryPoints]
+        [entryPoints.http]
+                address = ":80"
+
+[file]
+        filename = "/etc/traefik/rules.toml"
+
+[web]
+address = ":8080"

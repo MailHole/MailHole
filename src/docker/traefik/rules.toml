@@ -1,0 +1,51 @@
+[backends]
+        [backends.mailhole-api]
+                [backends.mailhole-api.LoadBalancer]
+                method = "wrr"
+                [backends.mailhole-api.servers]
+                        [backends.mailhole-api.servers.api-srv0]
+                        url = "http://mailhole-api:5000"
+                        weight = 1
+        [backends.minio]
+                [backends.minio.LoadBalancer]
+                method = "wrr"
+                [backends.minio.servers]
+                        [backends.minio.servers.minio-srv0]
+                        url = "http://minio:9000"
+                        weight = 1
+        [backends.nginx]
+                [backends.nginx.LoadBalancer]
+                method = "drr"
+                [backends.nginx.servers]
+                        [backend.nginx.servers.nginx-srv0]
+                        url = "http://nginx:80"
+                        weight = 1
+
+[frontends]
+        [frontends.mailhole-api]
+        entryPoints = ["http"]
+        backend = "mailhole-api"
+        passHostHeader = true
+                [frontends.mailhole-api.routes]
+                        [frontends.mailhole-api.routes.api]
+                        rule = "PathPrefix:/api/"
+        [frontends.hangfire]
+        entryPoints = ["http"]
+        backend = "mailhole-api"
+        passHostHeader = true
+                [frontends.hangfire.routes]
+                        [frontends.hangfire.routes.dashboard]
+                        rule = "PathPrefix:/hangfire/"
+        [frontends.minio-ui]
+        entryPoints = ["http"]
+        backend = "minio"
+        passHostHeader = true
+                [frontends.minio-ui.routes]
+                        [frontends.minio-ui.routes.ui]
+                        rule = "PathPrefix:/minio/"
+        [frontends.nginx]
+        entryPoints = ["http"]
+        backend = "nginx"
+        passHostHeader = true
+        rule = "PathPrefix:/"
+        priority = 1

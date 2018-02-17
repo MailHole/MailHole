@@ -5,14 +5,24 @@
     <LangVersion>7.2</LangVersion>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="Hangfire.Core" Version="1.6.17" />
+    <PackageReference Include="Hangfire.Redis.StackExchange" Version="1.7.2" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="2.0.0" />
     <PackageReference Include="MimeKit" Version="2.0.1" />
+    <PackageReference Include="Minio.NetCore" Version="1.0.7" />
     <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
     <PackageReference Include="SmtpServer" Version="4.3.0" />
-    <PackageReference Include="StackExchange.Redis.StrongName" Version="1.2.6" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MailHole.Common\MailHole.Common.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\MailHole.SmtpListener-Debug.dockerfile">
+      <Link>MailHole.SmtpListener-Debug.dockerfile</Link>
+    </Content>
+    <Content Include="..\MailHole.SmtpListener-Release.dockerfile">
+      <Link>MailHole.SmtpListener-Release.dockerfile</Link>
+    </Content>
   </ItemGroup>
 </Project>

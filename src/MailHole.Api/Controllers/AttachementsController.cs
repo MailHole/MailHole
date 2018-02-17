@@ -1,9 +1,11 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.IO;
 using System.Threading.Tasks;
 using MailHole.Api.Models.Validation;
 using MailHole.Common.Model;
 using Microsoft.AspNetCore.Mvc;
+using Minio;
 using Newtonsoft.Json;
 using StackExchange.Redis;
 
@@ -11,11 +13,13 @@ namespace MailHole.Api.Controllers
 {
     public class AttachementsController : Controller
     {
+        private readonly MinioClient _minio;
         private readonly IDatabaseAsync _redisDb;
 
-        public AttachementsController(IDatabaseAsync redisDb)
+        public AttachementsController(IDatabaseAsync redisDb, MinioClient minio)
         {
             _redisDb = redisDb;
+            _minio = minio;
         }
 
         /// <summary>
@@ -32,10 +36,33 @@ namespace MailHole.Api.Controllers
         [ProducesResponseType(typeof(AttachementInfo), 200)]
         [ProducesResponseType(typeof(void), 400)]
         [ProducesResponseType(typeof(void), 404)]
-        public async Task<IActionResult> GetAttachemntDetails([FromRoute, EmailAddress, Required] string receiverAddress,
-            [FromRoute, Required] Guid? mailGuid, [FromRoute, Required] Guid? attachementGuid)
+        public async Task<IActionResult> GetAttachemntDetails(
+            [FromRoute, EmailAddress, Required] string receiverAddress,
+            [FromRoute, Required] Guid? mailGuid,
+            [FromRoute, Required] Guid? attachementGuid)
         {
             return BadRequest();
+        }
+
+        [HttpGet]
+        [Route("api/v1/{receiverAddress}/mails/{mailGuid}/attachements/{attachementGuid}/files/{attachementFileGuid}")]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(typeof(void), 400)]
+        [ProducesResponseType(typeof(void), 404)]
+        public async Task<IActionResult> GetAttachementFile(
+            [FromRoute, EmailAddress, Required] string receiverAddress,
+            [FromRoute, Required] Guid? mailGuid,
+            [FromRoute, Required] Guid? attachementGuid,
+            [FromRoute, Required] Guid? attachementFileGuid)
+        {
+
+            var memoryStream = new MemoryStream();
+            await _minio.GetObjectAsync("test", "Exercise-2-Container.zip", stream =>
+            {
+                stream.CopyTo(memoryStream);
+            });
+            memoryStream.Position = 0;
+            return File(memoryStream, "application/octet-stream", "test.zip");
         }
         
         /// <summary>
