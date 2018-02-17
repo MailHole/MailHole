@@ -1,6 +1,21 @@
 # MailHole
 
-[![Build status](https://ci.appveyor.com/api/projects/status/u5hn3f0v3xfd5rya?svg=true)](https://ci.appveyor.com/project/PeterKurfer/mailhole)
+## TravisCI
+
+[![Build Status](https://travis-ci.org/baez90/MailHole.svg?branch=master)](https://travis-ci.org/baez90/MailHole)
+
+## Docker
+
+### API
+
+[![](https://images.microbadger.com/badges/image/baez90/mailhole-api.svg)](https://microbadger.com/images/baez90/mailhole-api "Details")
+
+[![](https://images.microbadger.com/badges/version/baez90/mailhole-api.svg)](https://microbadger.com/images/baez90/mailhole-api "Details")
+
+[![](https://images.microbadger.com/badges/commit/baez90/mailhole-api.svg)](https://microbadger.com/images/baez90/mailhole-api "Details")
+
+### SMTP listener
+
 
 
 ## Docs

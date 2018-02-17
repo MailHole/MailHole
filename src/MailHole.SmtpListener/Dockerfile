@@ -26,5 +26,5 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
       maintainer="peter.kurfer@googlemail.com"
 
 WORKDIR /app
-COPY --from=build-env /app/MailHole.Api/out .
+COPY --from=build-env /app/MailHole.SmtpListener/out .
 ENTRYPOINT ["dotnet", "MailHole.SmtpListener.dll"]
