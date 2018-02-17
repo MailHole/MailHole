@@ -1,9 +1,11 @@
-﻿using MailHole.Common.Extensions;
+﻿using System.IO;
+using MailHole.Common.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
+using Microsoft.Extensions.PlatformAbstractions;
 using StackExchange.Redis;
 
 namespace MailHole.Api
@@ -31,6 +33,8 @@ namespace MailHole.Api
             services.AddSwaggerGen(swagger =>
             {
                 swagger.SwaggerDoc("v1", new Swashbuckle.AspNetCore.Swagger.Info { Title = "MailHole API" });
+                var xmlDocPath = Path.Combine(PlatformServices.Default.Application.ApplicationBasePath, "MailHole.Api.xml");
+                swagger.IncludeXmlComments(xmlDocPath);
             });
         }
 
