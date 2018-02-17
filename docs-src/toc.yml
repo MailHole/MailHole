@@ -3,5 +3,5 @@
 - name: API Reference
   href: api/
   homepage: api/index.md
-- name: REST API
+- name: "REST API & UIs"
   href: apidoc/
