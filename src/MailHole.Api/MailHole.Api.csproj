@@ -35,8 +35,5 @@
     <Content Include="..\MailHole.Api-Debug.dockerfile">
       <Link>MailHole.Api-Debug.dockerfile</Link>
     </Content>
-    <Content Include="..\MailHole.Api-Release.dockerfile">
-      <Link>MailHole.Api-Release.dockerfile</Link>
-    </Content>
   </ItemGroup>
 </Project>
