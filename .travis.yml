@@ -1,6 +1,6 @@
 language: csharp
 mono: none
-donet: 2.1.4
+dotnet: 2.1.4
 script:
   - cd src/
   - dotnet restore
