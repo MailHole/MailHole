@@ -8,3 +8,10 @@
       href: persistence/redis.md
     - name: Minio
       href: persistence/minio.md
+- name: SMTP
+  -href: smtp.md
+  items:
+    - name: Basics
+      href: smtp/basics.md
+    - name: Authentication
+      href: smtp/authentication.md

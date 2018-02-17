@@ -9,6 +9,7 @@
 * Dashboard to have a look at the processing queue
 * Dashboard to get some metrics of the service like how many mails were received, ...
 * API to check if an attachement was transmitted correctly by passing a prebuilt hash to API or by fetching the attachement details including its hashes
+* Optional authentication at the SMTP server for further tests
 
 ## Architecture
 

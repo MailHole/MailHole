@@ -97,6 +97,18 @@
                             <a href="../persistence/minio.html" title="Minio" class="">Minio</a>
                           </li>
                         </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">SMTP</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../smtp/basics.html" title="Basics" class="">Basics</a>
+                          </li>
+                          <li class="">
+                            <a href="../smtp/authentication.html" title="Authentication" class="">Authentication</a>
+                          </li>
+                        </ul>  </li>
                   </ul>        </div>
               </div>
             </div>
@@ -108,7 +120,72 @@
 <h1 id="redis">Redis</h1>
 
 <h2 id="entities">Entities</h2>
+<h3 id="receiverinfo">ReceiverInfo</h3>
+<p>Every receiver is stored in Redis as a JSON value with the mail address as key.
+The JSON value has the following structure:</p>
+<pre><code class="lang-json">{
+    &quot;mailStorageGuid&quot;: &quot;b8187230-ced6-48f9-957a-6a76b4250d8a&quot;,
+    &quot;attachementStorageGuid&quot;: &quot;33250880-d59e-4513-8f54-d5edb0ea3957&quot;,
+    &quot;knownNames&quot;: [
+        &quot;Hans Dampf&quot;,
+        &quot;Rainer Zufall&quot;
+    ],
+    &quot;lastMailReceived&quot;: &quot;.NET DateTime format&quot;,
+    &quot;totalMailsReceived&quot;: 42
+}
+</code></pre><p>The property <code>mailStorageGuid</code> is used to resolve a hashset containing all mails the user has already received.
+See <a href="#receivemMail">ReceivedMail</a> for further information.</p>
+<p>The property <code>attachementStorageGuid</code> is used to resolve a hashset containing all attachements informations the user has already received.
+See <a href="#attachementsinfo">AttachementsInfo</a> for further information.</p>
+<h3 id="receivedmail">ReceivedMail</h3>
+<p>Every received mail is stored in the mail storage of the receiver.
+Every time <em>MailHole</em> received a mail it assigns a GUID to the mail and stores the mail under this GUID in the mail storage of the receiver.</p>
+<p>The received mail has the following structure</p>
+<pre><code class="lang-json">{
+    &quot;sender&quot;: &quot;any@one.com&quot;,
+    &quot;bcc&quot;: [
+        &quot;another@one.com&quot;
+    ],
+    &quot;cc&quot;: [
+        &quot;andAnother@one.com&quot;
+    ],
+    &quot;subject&quot;: &quot;subject of the mail&quot;,
+    &quot;htmlBody&quot;: &quot;&lt;html&gt;&lt;body&gt;you know...HTML&lt;/body&gt;&lt;/html&gt;&quot;,
+    &quot;textBody&quot;: &quot;yeah...the text body of the mail&quot;,
+    &quot;headers&quot;: {
+        &quot;header1&quot;: &quot;and its value&quot;
+    },
+    &quot;utcReceivedTime&quot;: &quot;.NET DateTime format&quot;,
+    &quot;attachementsGuid&quot;: &quot;f068d581-3ff3-478a-8681-b0c203416be0&quot;
+}
+</code></pre><p>If the mail had attachements the property <code>attachementsGuid</code> will be set to a GUID that can be used to lookup the attachements information in the attachements storage of a receiver.
+See <a href="#attachementsinfo">AttachementsInfo</a> for further information.</p>
+<h3 id="attachementsinfo">AttachementsInfo</h3>
+<p>The attachements information entity contains all information about a single mail attachement.
+It is stored as a JSON array in the attachements storage hashset of a receiver at the <code>attachementsGuid</code> key.</p>
+<p>The entity has the following structure:</p>
+<pre><code class="lang-json">[
+    {
+        &quot;originalFileName&quot;: &quot;LICENSE&quot;,
+        &quot;mimeType&quot;: &quot;text/plain&quot;,
+        &quot;fileSize&quot;: 35821,
+        &quot;md5&quot;: &quot;3C34AFDC3ADF82D2448F12715A255122&quot;,
+        &quot;sha1&quot;: &quot;7713A1753CE88F2C7E6B054ECC8E4C786DF76300&quot;,
+        &quot;sha256&quot;: &quot;0B383D5A63DA644F628D99C33976EA6487ED89AAA59F0B3257992DEAC1171E6B&quot;
+    },
+    {
+        &quot;originalFileName&quot;: &quot;docfx.json&quot;,
+        &quot;mimeType&quot;: &quot;text/plain&quot;,
+        &quot;fileSize&quot;: 1131,
+        &quot;md5&quot;: &quot;37378F0021B80D47B0EBF621B5FB97CC&quot;,
+        &quot;sha1&quot;: &quot;92F26C0B07AF25FFBFEEAF04AFDF8C11AAA755BC&quot;,
+        &quot;sha256&quot;: &quot;294F1C714150053A4EF1783590F01CD05924B77AFBC45518929D0902F960E982&quot;
+    }
+]
+</code></pre><p>Where <code>fileSize</code> is the size in bytes.
+The other properties should be clear.</p>
 <h2 id="relationships">Relationships</h2>
+<p><em>TODO: Summarize relationships with PlantUML class diagram</em>.</p>
 </article>
           </div>
           

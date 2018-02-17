@@ -309,7 +309,7 @@
       "output": {
         ".html": {
           "relative_path": "documentation/intro.html",
-          "hash": "QUUvBM0ex0YedtM7Ryw+aA=="
+          "hash": "JHJCe/0/zJUfjXT+aiqTbg=="
         }
       },
       "is_incremental": true,
@@ -324,7 +324,7 @@
       "output": {
         ".html": {
           "relative_path": "documentation/persistence.html",
-          "hash": "3TKPhJRMJwIYyI6NAjXwxw=="
+          "hash": "q4gBG1n7ZGVpNqh0Ec4kCw=="
         }
       },
       "is_incremental": true,
@@ -336,7 +336,7 @@
       "output": {
         ".html": {
           "relative_path": "documentation/persistence/minio.html",
-          "hash": "2kbrGxR3uG0Wet8UrkO34A=="
+          "hash": "5j5eNhS1hsQscdF6ToAeVA=="
         }
       },
       "is_incremental": true,
@@ -348,7 +348,43 @@
       "output": {
         ".html": {
           "relative_path": "documentation/persistence/redis.html",
-          "hash": "MV7D5Nvlb7JMKtOkT0PcvA=="
+          "hash": "Qro1Px4Le1fJODJARwaB9Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "documentation/smtp.md",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/smtp.html",
+          "hash": "dWFnVaDEsoV4BkRi79YvBg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "documentation/smtp/authentication.md",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/smtp/authentication.html",
+          "hash": "zQywSwJpLCuef7bgixb6OA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "documentation/smtp/basics.md",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/smtp/basics.html",
+          "hash": "2wICKXdWwPgXsvXRfWTrPQ=="
         }
       },
       "is_incremental": true,
