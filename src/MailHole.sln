@@ -10,6 +10,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docker", "docker", "{66375F
 ProjectSection(SolutionItems) = preProject
 	docker\MailHole-Debug-compose.yml = docker\MailHole-Debug-compose.yml
 	docker\MailHole-Release-compose.yml = docker\MailHole-Release-compose.yml
+	docker\MailHole-Local-Debug-compose.yml = docker\MailHole-Local-Debug-compose.yml
+	.dockerignore = .dockerignore
 EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{F56727EA-26D2-4800-ADDB-F1CFA74FC8F6}"
@@ -23,6 +25,15 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailHole.SmtpListener.UnitTests", "MailHole.SmtpListener.UnitTests\MailHole.SmtpListener.UnitTests.csproj", "{45297C86-71EF-4EB6-A2AA-AA5F9B17BDEC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailHole.SmtpListener.IntegrationTests", "MailHole.SmtpListener.IntegrationTests\MailHole.SmtpListener.IntegrationTests.csproj", "{2451CBEF-620C-444E-8B0E-31CBE74529EF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "envs", "envs", "{98026C1A-BBDB-4D74-9B3C-4A66A6D7BEF5}"
+ProjectSection(SolutionItems) = preProject
+	docker\envs\MailHole.API-Debug.env = docker\envs\MailHole.API-Debug.env
+	docker\envs\MailHole.API-Release.env = docker\envs\MailHole.API-Release.env
+	docker\envs\MailHole.SMTP-Debug.env = docker\envs\MailHole.SMTP-Debug.env
+	docker\envs\MailHole.SMTP-Release.env = docker\envs\MailHole.SMTP-Release.env
+	docker\envs\Minio.env = docker\envs\Minio.env
+EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -62,5 +73,6 @@ Global
 		{221B306E-91C6-42B4-A68F-A6DE22E32B31} = {F0F88DAF-9AD0-4687-B86B-94B784C8A7AF}
 		{45297C86-71EF-4EB6-A2AA-AA5F9B17BDEC} = {F0F88DAF-9AD0-4687-B86B-94B784C8A7AF}
 		{2451CBEF-620C-444E-8B0E-31CBE74529EF} = {F0F88DAF-9AD0-4687-B86B-94B784C8A7AF}
+		{98026C1A-BBDB-4D74-9B3C-4A66A6D7BEF5} = {66375F4E-8D83-4412-B929-77B15DA25AD0}
 	EndGlobalSection
 EndGlobal

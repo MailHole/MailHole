@@ -1,15 +1,16 @@
 ﻿using System;
-using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Hangfire;
 using Hangfire.Redis;
 using MailHole.Common.Extensions;
 using MailHole.Common.HangfireExtensions;
+using MailHole.Common.Model.Options;
 using MailHole.SmtpListener.Jobs;
 using MailHole.SmtpListener.Persistence;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.PlatformAbstractions;
 using SmtpServer;
 using StackExchange.Redis;
 
@@ -21,29 +22,23 @@ namespace MailHole.SmtpListener
         {
             var config = new ConfigurationBuilder()
                 .AddEnvironmentVariables()
+                .SetBasePath(PlatformServices.Default.Application.ApplicationBasePath)
+                .AddJsonFile($"appsettings.{Environment.UserName}.json", true)
+                .AddJsonFile("appsettings.Development.json", true)
+                .AddJsonFile("appsettings.json")
                 .Build();
 
             var serviceProvider = BootstrapDependencyInjection(config);
+            var hangfireOptions = serviceProvider.GetHangfireOptionsOrDefault();
+            var hangfireJobStorage = CreateRedisJobStorage(hangfireOptions);
 
-            var hangfireJobStorage = new RedisStorage(serviceProvider.GetService<ConnectionMultiplexer>(),
-                new RedisStorageOptions
-                {
-                    Db = config.GetRedisDatabaseNumber(),
-                    Prefix = "Hangfire"
-                });
-
-            using (var server = new BackgroundJobServer(new BackgroundJobServerOptions
+            using (var server = CreateHangfireBackgroundJobServer(hangfireJobStorage, new HangfireActivator(serviceProvider)))
             {
-                Activator = new HangfireActivator(serviceProvider),
-                WorkerCount = 5
-            }, hangfireJobStorage))
-            {
-
+                var smtpOptions = serviceProvider.GetSmtpOptionsOrDefault();
                 var backgroundJobClient = new BackgroundJobClient(hangfireJobStorage);
-                Console.WriteLine($"Listening on Ports {string.Join(", ", config.GetSmtpPorts())}");
                 var options = new OptionsBuilder()
-                    .ServerName(config.GetSmtpHostName())
-                    .Port(config.GetSmtpPorts())
+                    .ServerName(smtpOptions.HostName)
+                    .Port(smtpOptions.Port)
                     .MessageStore(new RedisMinioMailStore(backgroundJobClient))
                     .Build();
 
@@ -56,11 +51,34 @@ namespace MailHole.SmtpListener
         private static IServiceProvider BootstrapDependencyInjection(IConfiguration configuration)
         {
             return new ServiceCollection()
-                .AddSingleton(provider => ConnectionMultiplexer.Connect(configuration.GetRedisConnectionString()))
+                .ConfigureMailHoleOptions(configuration)
+                .AddSingleton(provider =>
+                    ConnectionMultiplexer.Connect(provider.GetRedisOptionsOrDefault().ConnectionString)
+                )
                 .AddTransient(provider =>
-                    provider.GetService<ConnectionMultiplexer>().GetDatabase(configuration.GetRedisDatabaseNumber()))
+                    provider.GetService<ConnectionMultiplexer>()
+                        .GetDatabase(provider.GetRedisOptionsOrDefault().DatabaseIndex)
+                )
                 .AddTransient(provider => new RedisMinioStoreJob(provider.GetService<IDatabase>()))
                 .BuildServiceProvider();
+        }
+
+        private static JobStorage CreateRedisJobStorage(HangfireOptions hangfireOptions)
+        {
+            return new RedisStorage(hangfireOptions.RedisConnectionString,
+                new RedisStorageOptions
+                {
+                    Db = hangfireOptions.RedisDatabaseIndex,
+                    Prefix = hangfireOptions.RedisPrefix
+                });
+        }
+
+        private static BackgroundJobServer CreateHangfireBackgroundJobServer(JobStorage storage, JobActivator activator)
+        {
+            return new BackgroundJobServer(new BackgroundJobServerOptions
+            {
+                Activator = activator
+            }, storage);
         }
     }
 }

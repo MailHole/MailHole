@@ -367,3 +367,5 @@ __pycache__/
 # End of https://www.gitignore.io/api/docfx,intellij+all,visualstudio,visualstudiocode
 
 codealike.json
+
+**/appsettings.baez.json
