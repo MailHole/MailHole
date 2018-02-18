@@ -43,11 +43,11 @@ references:
   commentId: T:MailHole.Api.Controllers.AttachementsController
   fullName: MailHole.Api.Controllers.AttachementsController
   nameWithType: AttachementsController
-- uid: MailHole.Api.Controllers.AttachementsController.#ctor(StackExchange.Redis.IDatabaseAsync,MinioClient)
+- uid: MailHole.Api.Controllers.AttachementsController.#ctor(StackExchange.Redis.IDatabaseAsync,Minio.MinioClient)
   name: AttachementsController(IDatabaseAsync, MinioClient)
-  href: api/MailHole.Api.Controllers.AttachementsController.html#MailHole_Api_Controllers_AttachementsController__ctor_StackExchange_Redis_IDatabaseAsync_MinioClient_
-  commentId: M:MailHole.Api.Controllers.AttachementsController.#ctor(StackExchange.Redis.IDatabaseAsync,MinioClient)
-  fullName: MailHole.Api.Controllers.AttachementsController.AttachementsController(StackExchange.Redis.IDatabaseAsync, MinioClient)
+  href: api/MailHole.Api.Controllers.AttachementsController.html#MailHole_Api_Controllers_AttachementsController__ctor_StackExchange_Redis_IDatabaseAsync_Minio_MinioClient_
+  commentId: M:MailHole.Api.Controllers.AttachementsController.#ctor(StackExchange.Redis.IDatabaseAsync,Minio.MinioClient)
+  fullName: MailHole.Api.Controllers.AttachementsController.AttachementsController(StackExchange.Redis.IDatabaseAsync, Minio.MinioClient)
   nameWithType: AttachementsController.AttachementsController(IDatabaseAsync, MinioClient)
 - uid: MailHole.Api.Controllers.AttachementsController.#ctor*
   name: AttachementsController
@@ -232,11 +232,11 @@ references:
   commentId: T:MailHole.Api.Hangfire.HangfireAuthFilter
   fullName: MailHole.Api.Hangfire.HangfireAuthFilter
   nameWithType: HangfireAuthFilter
-- uid: MailHole.Api.Hangfire.HangfireAuthFilter.Authorize(DashboardContext)
+- uid: MailHole.Api.Hangfire.HangfireAuthFilter.Authorize(Hangfire.Dashboard.DashboardContext)
   name: Authorize(DashboardContext)
-  href: api/MailHole.Api.Hangfire.HangfireAuthFilter.html#MailHole_Api_Hangfire_HangfireAuthFilter_Authorize_DashboardContext_
-  commentId: M:MailHole.Api.Hangfire.HangfireAuthFilter.Authorize(DashboardContext)
-  fullName: MailHole.Api.Hangfire.HangfireAuthFilter.Authorize(DashboardContext)
+  href: api/MailHole.Api.Hangfire.HangfireAuthFilter.html#MailHole_Api_Hangfire_HangfireAuthFilter_Authorize_Hangfire_Dashboard_DashboardContext_
+  commentId: M:MailHole.Api.Hangfire.HangfireAuthFilter.Authorize(Hangfire.Dashboard.DashboardContext)
+  fullName: MailHole.Api.Hangfire.HangfireAuthFilter.Authorize(Hangfire.Dashboard.DashboardContext)
   nameWithType: HangfireAuthFilter.Authorize(DashboardContext)
 - uid: MailHole.Api.Hangfire.HangfireAuthFilter.Authorize*
   name: Authorize
@@ -466,11 +466,11 @@ references:
   commentId: Overload:MailHole.Common.Extensions.ConfigExtensions.BindSmtpOptions
   fullName: MailHole.Common.Extensions.ConfigExtensions.BindSmtpOptions
   nameWithType: ConfigExtensions.BindSmtpOptions
-- uid: MailHole.Common.Extensions.ConfigExtensions.ConfigureMailHoleOptions(IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)
+- uid: MailHole.Common.Extensions.ConfigExtensions.ConfigureMailHoleOptions(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)
   name: ConfigureMailHoleOptions(IServiceCollection, IConfiguration)
-  href: api/MailHole.Common.Extensions.ConfigExtensions.html#MailHole_Common_Extensions_ConfigExtensions_ConfigureMailHoleOptions_IServiceCollection_Microsoft_Extensions_Configuration_IConfiguration_
-  commentId: M:MailHole.Common.Extensions.ConfigExtensions.ConfigureMailHoleOptions(IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)
-  fullName: MailHole.Common.Extensions.ConfigExtensions.ConfigureMailHoleOptions(IServiceCollection, Microsoft.Extensions.Configuration.IConfiguration)
+  href: api/MailHole.Common.Extensions.ConfigExtensions.html#MailHole_Common_Extensions_ConfigExtensions_ConfigureMailHoleOptions_Microsoft_Extensions_DependencyInjection_IServiceCollection_Microsoft_Extensions_Configuration_IConfiguration_
+  commentId: M:MailHole.Common.Extensions.ConfigExtensions.ConfigureMailHoleOptions(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)
+  fullName: MailHole.Common.Extensions.ConfigExtensions.ConfigureMailHoleOptions(Microsoft.Extensions.DependencyInjection.IServiceCollection, Microsoft.Extensions.Configuration.IConfiguration)
   nameWithType: ConfigExtensions.ConfigureMailHoleOptions(IServiceCollection, IConfiguration)
 - uid: MailHole.Common.Extensions.ConfigExtensions.ConfigureMailHoleOptions*
   name: ConfigureMailHoleOptions
@@ -985,11 +985,11 @@ references:
   commentId: T:MailHole.SmtpListener.Persistence.RedisMinioMailStore
   fullName: MailHole.SmtpListener.Persistence.RedisMinioMailStore
   nameWithType: RedisMinioMailStore
-- uid: MailHole.SmtpListener.Persistence.RedisMinioMailStore.#ctor(IBackgroundJobClient)
+- uid: MailHole.SmtpListener.Persistence.RedisMinioMailStore.#ctor(Hangfire.IBackgroundJobClient)
   name: RedisMinioMailStore(IBackgroundJobClient)
-  href: api/MailHole.SmtpListener.Persistence.RedisMinioMailStore.html#MailHole_SmtpListener_Persistence_RedisMinioMailStore__ctor_IBackgroundJobClient_
-  commentId: M:MailHole.SmtpListener.Persistence.RedisMinioMailStore.#ctor(IBackgroundJobClient)
-  fullName: MailHole.SmtpListener.Persistence.RedisMinioMailStore.RedisMinioMailStore(IBackgroundJobClient)
+  href: api/MailHole.SmtpListener.Persistence.RedisMinioMailStore.html#MailHole_SmtpListener_Persistence_RedisMinioMailStore__ctor_Hangfire_IBackgroundJobClient_
+  commentId: M:MailHole.SmtpListener.Persistence.RedisMinioMailStore.#ctor(Hangfire.IBackgroundJobClient)
+  fullName: MailHole.SmtpListener.Persistence.RedisMinioMailStore.RedisMinioMailStore(Hangfire.IBackgroundJobClient)
   nameWithType: RedisMinioMailStore.RedisMinioMailStore(IBackgroundJobClient)
 - uid: MailHole.SmtpListener.Persistence.RedisMinioMailStore.#ctor*
   name: RedisMinioMailStore
