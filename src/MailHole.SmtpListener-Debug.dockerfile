@@ -8,4 +8,7 @@ RUN dotnet restore
 
 VOLUME /app
 
+EXPOSE 25
+EXPOSE 587
+
 ENTRYPOINT ["dotnet", "run", "-p", "MailHole.SmtpListener"]

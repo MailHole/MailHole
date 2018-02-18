@@ -33,7 +33,7 @@ namespace MailHole.Api
                     config.UseRedisStorage(Configuration.GetRedisConnectionString(), new RedisStorageOptions
                     {
                         Db = Configuration.GetRedisDatabaseNumber(),
-                        Prefix = "hangfire-"
+                        Prefix = "Hangfire"
                     });
                 });
             
@@ -63,7 +63,7 @@ namespace MailHole.Api
             {
                 Authorization = new [] { new HangfireAuthFilter()}
             });
-            app.UseHangfireServer();
+
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {

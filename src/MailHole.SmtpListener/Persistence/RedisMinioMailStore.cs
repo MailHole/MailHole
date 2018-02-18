@@ -2,47 +2,53 @@
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Hangfire;
 using MailHole.SmtpListener.Extensions;
+using MailHole.SmtpListener.Jobs;
 using MimeKit;
-using Newtonsoft.Json;
 using SmtpServer;
 using SmtpServer.Mail;
 using SmtpServer.Protocol;
 using SmtpServer.Storage;
-using StackExchange.Redis;
+
+using static MailHole.Common.MailHoleConstants;
 
 namespace MailHole.SmtpListener.Persistence
 {
     public class RedisMinioMailStore : MessageStore
     {
 
-        private readonly int _databaseNumber;
-        private readonly IConnectionMultiplexer _redis;
+        private readonly IBackgroundJobClient _backgroundJobClient;
 
-        public RedisMinioMailStore(string connectionString, int databaseNumber)
+        public RedisMinioMailStore(IBackgroundJobClient backgroundJobClient)
         {
-            _databaseNumber = databaseNumber;
-            _redis = ConnectionMultiplexer.Connect(connectionString);
+            _backgroundJobClient = backgroundJobClient;
         }
 
         public override async Task<SmtpResponse> SaveAsync(ISessionContext context, IMessageTransaction transaction, CancellationToken cancellationToken)
         {
-            var mailGuid = Guid.NewGuid().ToString();
-            var textMessage = (ITextMessage) transaction.Message;
-            var message = MimeMessage.Load(textMessage.Content);
-            var attachements = message.Attachments.ToList();
-            foreach (var attachement in attachements)
+            try
             {
-                //TODO write files to temp directory for further uploads
-                //attachement.WriteToAsync()
+                var textMessage = (ITextMessage) transaction.Message;
+                var message = MimeMessage.Load(textMessage.Content);
+                var entity = message.ToReceivedMail();
+                var mailGuid = entity.Headers.ContainsKey(MailGuidHeader)
+                    ? entity.Headers[MailGuidHeader]
+                    : Guid.NewGuid().ToString();
+                foreach (var mimeEntity in message.Attachments)
+                {
+                    /* TODO store attachements as tmp files and load them to minio */
+                }
+                
+                
+                _backgroundJobClient.Enqueue<RedisMinioStoreJob>(rmsj => rmsj.StoreMail(transaction.To.Select(im => im.AsAddress()).ToList(), mailGuid, entity));
+                return SmtpResponse.Ok;
             }
-            var entity = message.ToReceivedMail();
-            var db = _redis.GetDatabase(_databaseNumber);
-            foreach (var mailbox in transaction.To)
+            catch (Exception e)
             {
-                await db.HashSetAsync(mailbox.AsAddress(), mailGuid, JsonConvert.SerializeObject(entity));
+                Console.WriteLine(e);
+                return SmtpResponse.MailboxUnavailable;
             }
-            return SmtpResponse.Ok;
         }
     }
 }

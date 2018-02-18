@@ -19,49 +19,31 @@ services:
       - mailhole-smtp
   redis:
     image: redis:3.2.11
-    ports:
-      - 6379:6379
   minio:
     image: minio/minio:RELEASE.2018-02-09T22-40-05Z
-    ports:
-      - 9000:9000
     environment:
       - "MINIO_ACCESS_KEY=19OWL0F004QOXHLK8KN4"
       - "MINIO_SECRET_KEY=LVUTKrQgRVY2iZr9iIArdGpXqvSA4gZqxWsif8U8"
     command: server /data
   mailhole-api:
-    build:
-      context: ../
-      dockerfile: MailHole.Api-Debug.dockerfile
+    image: baez90/mailhole-api:latest
     environment:
-      - "ASPNETCORE_ENVIRONMENT=Development"
+      - "ASPNETCORE_ENVIRONMENT=Production"
       - "ASPNETCORE_URLS=http://0.0.0.0:5000"
       - "REDIS_CONNECTION=redis:6379"
       - "REDIS_DB_INDEX=1"
-    volumes:
-      - type: bind
-        source: ../
-        target: /app
-    ports:
-      - 5000:5000
     depends_on:
       - redis
       - minio
   mailhole-smtp:
-    build:
-      context: ../
-      dockerfile: MailHole.SmtpListener-Debug.dockerfile
+    image: baez90/mailhole-smtp:latest
     environment:
-      - "SMTP_HOST_NAME=localhost"
-      - "SMTP_PORTS=1025"
+      - "SMTP_HOST_NAME=0.0.0.0"
+      - "SMTP_PORTS=25"
       - "REDIS_CONNECTION=redis:6379"
       - "REDIS_DB_INDEX=1"
-    volumes:
-          - type: bind
-            source: ../
-            target: /app
     ports:
-      - 1025:1025
+      - 25:25
     depends_on:
       - redis
       - minio

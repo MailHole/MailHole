@@ -9,6 +9,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docker", "docker", "{66375F4E-8D83-4412-B929-77B15DA25AD0}"
 ProjectSection(SolutionItems) = preProject
 	docker\MailHole-Debug-compose.yml = docker\MailHole-Debug-compose.yml
+	docker\MailHole-Release-compose.yml = docker\MailHole-Release-compose.yml
 EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{F56727EA-26D2-4800-ADDB-F1CFA74FC8F6}"
@@ -18,6 +19,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{F0F88DAF-9AD0-4687-B86B-94B784C8A7AF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailHole.Api.UnitTests", "MailHole.Api.UnitTests\MailHole.Api.UnitTests.csproj", "{221B306E-91C6-42B4-A68F-A6DE22E32B31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailHole.SmtpListener.UnitTests", "MailHole.SmtpListener.UnitTests\MailHole.SmtpListener.UnitTests.csproj", "{45297C86-71EF-4EB6-A2AA-AA5F9B17BDEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailHole.SmtpListener.IntegrationTests", "MailHole.SmtpListener.IntegrationTests\MailHole.SmtpListener.IntegrationTests.csproj", "{2451CBEF-620C-444E-8B0E-31CBE74529EF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,11 +46,21 @@ Global
 		{221B306E-91C6-42B4-A68F-A6DE22E32B31}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{221B306E-91C6-42B4-A68F-A6DE22E32B31}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{221B306E-91C6-42B4-A68F-A6DE22E32B31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45297C86-71EF-4EB6-A2AA-AA5F9B17BDEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45297C86-71EF-4EB6-A2AA-AA5F9B17BDEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45297C86-71EF-4EB6-A2AA-AA5F9B17BDEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45297C86-71EF-4EB6-A2AA-AA5F9B17BDEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2451CBEF-620C-444E-8B0E-31CBE74529EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2451CBEF-620C-444E-8B0E-31CBE74529EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2451CBEF-620C-444E-8B0E-31CBE74529EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2451CBEF-620C-444E-8B0E-31CBE74529EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{B853411B-0F5E-46F5-A94A-4E7A25DAD85C} = {B3EAFD02-FE23-44D9-B771-9AD91E8D63C5}
 		{41B0BD5B-0289-4B8C-84A4-908DA7260915} = {F56727EA-26D2-4800-ADDB-F1CFA74FC8F6}
 		{E4ADD7F9-C977-4524-A350-E11258E9CCB0} = {F56727EA-26D2-4800-ADDB-F1CFA74FC8F6}
 		{221B306E-91C6-42B4-A68F-A6DE22E32B31} = {F0F88DAF-9AD0-4687-B86B-94B784C8A7AF}
+		{45297C86-71EF-4EB6-A2AA-AA5F9B17BDEC} = {F0F88DAF-9AD0-4687-B86B-94B784C8A7AF}
+		{2451CBEF-620C-444E-8B0E-31CBE74529EF} = {F0F88DAF-9AD0-4687-B86B-94B784C8A7AF}
 	EndGlobalSection
 EndGlobal
