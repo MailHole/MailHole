@@ -43,18 +43,33 @@ references:
   commentId: T:MailHole.Api.Controllers.AttachementsController
   fullName: MailHole.Api.Controllers.AttachementsController
   nameWithType: AttachementsController
-- uid: MailHole.Api.Controllers.AttachementsController.#ctor(StackExchange.Redis.IDatabaseAsync)
-  name: AttachementsController(IDatabaseAsync)
-  href: api/MailHole.Api.Controllers.AttachementsController.html#MailHole_Api_Controllers_AttachementsController__ctor_StackExchange_Redis_IDatabaseAsync_
-  commentId: M:MailHole.Api.Controllers.AttachementsController.#ctor(StackExchange.Redis.IDatabaseAsync)
-  fullName: MailHole.Api.Controllers.AttachementsController.AttachementsController(StackExchange.Redis.IDatabaseAsync)
-  nameWithType: AttachementsController.AttachementsController(IDatabaseAsync)
+- uid: MailHole.Api.Controllers.AttachementsController.#ctor(StackExchange.Redis.IDatabaseAsync,MinioClient)
+  name: AttachementsController(IDatabaseAsync, MinioClient)
+  href: api/MailHole.Api.Controllers.AttachementsController.html#MailHole_Api_Controllers_AttachementsController__ctor_StackExchange_Redis_IDatabaseAsync_MinioClient_
+  commentId: M:MailHole.Api.Controllers.AttachementsController.#ctor(StackExchange.Redis.IDatabaseAsync,MinioClient)
+  fullName: MailHole.Api.Controllers.AttachementsController.AttachementsController(StackExchange.Redis.IDatabaseAsync, MinioClient)
+  nameWithType: AttachementsController.AttachementsController(IDatabaseAsync, MinioClient)
 - uid: MailHole.Api.Controllers.AttachementsController.#ctor*
   name: AttachementsController
   href: api/MailHole.Api.Controllers.AttachementsController.html#MailHole_Api_Controllers_AttachementsController__ctor_
   commentId: Overload:MailHole.Api.Controllers.AttachementsController.#ctor
   fullName: MailHole.Api.Controllers.AttachementsController.AttachementsController
   nameWithType: AttachementsController.AttachementsController
+- uid: MailHole.Api.Controllers.AttachementsController.GetAttachementFile(System.String,System.Nullable{System.Guid},System.Nullable{System.Guid},System.Nullable{System.Guid})
+  name: GetAttachementFile(String, Nullable<Guid>, Nullable<Guid>, Nullable<Guid>)
+  href: api/MailHole.Api.Controllers.AttachementsController.html#MailHole_Api_Controllers_AttachementsController_GetAttachementFile_System_String_System_Nullable_System_Guid__System_Nullable_System_Guid__System_Nullable_System_Guid__
+  commentId: M:MailHole.Api.Controllers.AttachementsController.GetAttachementFile(System.String,System.Nullable{System.Guid},System.Nullable{System.Guid},System.Nullable{System.Guid})
+  name.vb: GetAttachementFile(String, Nullable(Of Guid), Nullable(Of Guid), Nullable(Of Guid))
+  fullName: MailHole.Api.Controllers.AttachementsController.GetAttachementFile(System.String, System.Nullable<System.Guid>, System.Nullable<System.Guid>, System.Nullable<System.Guid>)
+  fullName.vb: MailHole.Api.Controllers.AttachementsController.GetAttachementFile(System.String, System.Nullable(Of System.Guid), System.Nullable(Of System.Guid), System.Nullable(Of System.Guid))
+  nameWithType: AttachementsController.GetAttachementFile(String, Nullable<Guid>, Nullable<Guid>, Nullable<Guid>)
+  nameWithType.vb: AttachementsController.GetAttachementFile(String, Nullable(Of Guid), Nullable(Of Guid), Nullable(Of Guid))
+- uid: MailHole.Api.Controllers.AttachementsController.GetAttachementFile*
+  name: GetAttachementFile
+  href: api/MailHole.Api.Controllers.AttachementsController.html#MailHole_Api_Controllers_AttachementsController_GetAttachementFile_
+  commentId: Overload:MailHole.Api.Controllers.AttachementsController.GetAttachementFile
+  fullName: MailHole.Api.Controllers.AttachementsController.GetAttachementFile
+  nameWithType: AttachementsController.GetAttachementFile
 - uid: MailHole.Api.Controllers.AttachementsController.GetAttachemntDetails(System.String,System.Nullable{System.Guid},System.Nullable{System.Guid})
   name: GetAttachemntDetails(String, Nullable<Guid>, Nullable<Guid>)
   href: api/MailHole.Api.Controllers.AttachementsController.html#MailHole_Api_Controllers_AttachementsController_GetAttachemntDetails_System_String_System_Nullable_System_Guid__System_Nullable_System_Guid__
@@ -163,18 +178,36 @@ references:
   commentId: T:MailHole.Api.Controllers.ReceiversController
   fullName: MailHole.Api.Controllers.ReceiversController
   nameWithType: ReceiversController
-- uid: MailHole.Api.Controllers.ReceiversController.#ctor(StackExchange.Redis.IDatabaseAsync)
-  name: ReceiversController(IDatabaseAsync)
-  href: api/MailHole.Api.Controllers.ReceiversController.html#MailHole_Api_Controllers_ReceiversController__ctor_StackExchange_Redis_IDatabaseAsync_
-  commentId: M:MailHole.Api.Controllers.ReceiversController.#ctor(StackExchange.Redis.IDatabaseAsync)
-  fullName: MailHole.Api.Controllers.ReceiversController.ReceiversController(StackExchange.Redis.IDatabaseAsync)
-  nameWithType: ReceiversController.ReceiversController(IDatabaseAsync)
+- uid: MailHole.Api.Controllers.ReceiversController.#ctor(StackExchange.Redis.IDatabaseAsync,Microsoft.Extensions.Logging.ILogger{MailHole.Api.Controllers.ReceiversController})
+  name: ReceiversController(IDatabaseAsync, ILogger<ReceiversController>)
+  href: api/MailHole.Api.Controllers.ReceiversController.html#MailHole_Api_Controllers_ReceiversController__ctor_StackExchange_Redis_IDatabaseAsync_Microsoft_Extensions_Logging_ILogger_MailHole_Api_Controllers_ReceiversController__
+  commentId: M:MailHole.Api.Controllers.ReceiversController.#ctor(StackExchange.Redis.IDatabaseAsync,Microsoft.Extensions.Logging.ILogger{MailHole.Api.Controllers.ReceiversController})
+  name.vb: ReceiversController(IDatabaseAsync, ILogger(Of ReceiversController))
+  fullName: MailHole.Api.Controllers.ReceiversController.ReceiversController(StackExchange.Redis.IDatabaseAsync, Microsoft.Extensions.Logging.ILogger<MailHole.Api.Controllers.ReceiversController>)
+  fullName.vb: MailHole.Api.Controllers.ReceiversController.ReceiversController(StackExchange.Redis.IDatabaseAsync, Microsoft.Extensions.Logging.ILogger(Of MailHole.Api.Controllers.ReceiversController))
+  nameWithType: ReceiversController.ReceiversController(IDatabaseAsync, ILogger<ReceiversController>)
+  nameWithType.vb: ReceiversController.ReceiversController(IDatabaseAsync, ILogger(Of ReceiversController))
 - uid: MailHole.Api.Controllers.ReceiversController.#ctor*
   name: ReceiversController
   href: api/MailHole.Api.Controllers.ReceiversController.html#MailHole_Api_Controllers_ReceiversController__ctor_
   commentId: Overload:MailHole.Api.Controllers.ReceiversController.#ctor
   fullName: MailHole.Api.Controllers.ReceiversController.ReceiversController
   nameWithType: ReceiversController.ReceiversController
+- uid: MailHole.Api.Controllers.ReceiversController.GetAttachementFile(System.String,System.Nullable{System.Guid})
+  name: GetAttachementFile(String, Nullable<Guid>)
+  href: api/MailHole.Api.Controllers.ReceiversController.html#MailHole_Api_Controllers_ReceiversController_GetAttachementFile_System_String_System_Nullable_System_Guid__
+  commentId: M:MailHole.Api.Controllers.ReceiversController.GetAttachementFile(System.String,System.Nullable{System.Guid})
+  name.vb: GetAttachementFile(String, Nullable(Of Guid))
+  fullName: MailHole.Api.Controllers.ReceiversController.GetAttachementFile(System.String, System.Nullable<System.Guid>)
+  fullName.vb: MailHole.Api.Controllers.ReceiversController.GetAttachementFile(System.String, System.Nullable(Of System.Guid))
+  nameWithType: ReceiversController.GetAttachementFile(String, Nullable<Guid>)
+  nameWithType.vb: ReceiversController.GetAttachementFile(String, Nullable(Of Guid))
+- uid: MailHole.Api.Controllers.ReceiversController.GetAttachementFile*
+  name: GetAttachementFile
+  href: api/MailHole.Api.Controllers.ReceiversController.html#MailHole_Api_Controllers_ReceiversController_GetAttachementFile_
+  commentId: Overload:MailHole.Api.Controllers.ReceiversController.GetAttachementFile
+  fullName: MailHole.Api.Controllers.ReceiversController.GetAttachementFile
+  nameWithType: ReceiversController.GetAttachementFile
 - uid: MailHole.Api.Controllers.ReceiversController.GetReceiverInfo(System.String)
   name: GetReceiverInfo(String)
   href: api/MailHole.Api.Controllers.ReceiversController.html#MailHole_Api_Controllers_ReceiversController_GetReceiverInfo_System_String_
@@ -187,6 +220,30 @@ references:
   commentId: Overload:MailHole.Api.Controllers.ReceiversController.GetReceiverInfo
   fullName: MailHole.Api.Controllers.ReceiversController.GetReceiverInfo
   nameWithType: ReceiversController.GetReceiverInfo
+- uid: MailHole.Api.Hangfire
+  name: MailHole.Api.Hangfire
+  href: api/MailHole.Api.Hangfire.html
+  commentId: N:MailHole.Api.Hangfire
+  fullName: MailHole.Api.Hangfire
+  nameWithType: MailHole.Api.Hangfire
+- uid: MailHole.Api.Hangfire.HangfireAuthFilter
+  name: HangfireAuthFilter
+  href: api/MailHole.Api.Hangfire.HangfireAuthFilter.html
+  commentId: T:MailHole.Api.Hangfire.HangfireAuthFilter
+  fullName: MailHole.Api.Hangfire.HangfireAuthFilter
+  nameWithType: HangfireAuthFilter
+- uid: MailHole.Api.Hangfire.HangfireAuthFilter.Authorize(DashboardContext)
+  name: Authorize(DashboardContext)
+  href: api/MailHole.Api.Hangfire.HangfireAuthFilter.html#MailHole_Api_Hangfire_HangfireAuthFilter_Authorize_DashboardContext_
+  commentId: M:MailHole.Api.Hangfire.HangfireAuthFilter.Authorize(DashboardContext)
+  fullName: MailHole.Api.Hangfire.HangfireAuthFilter.Authorize(DashboardContext)
+  nameWithType: HangfireAuthFilter.Authorize(DashboardContext)
+- uid: MailHole.Api.Hangfire.HangfireAuthFilter.Authorize*
+  name: Authorize
+  href: api/MailHole.Api.Hangfire.HangfireAuthFilter.html#MailHole_Api_Hangfire_HangfireAuthFilter_Authorize_
+  commentId: Overload:MailHole.Api.Hangfire.HangfireAuthFilter.Authorize
+  fullName: MailHole.Api.Hangfire.HangfireAuthFilter.Authorize
+  nameWithType: HangfireAuthFilter.Authorize
 - uid: MailHole.Api.Models
   name: MailHole.Api.Models
   href: api/MailHole.Api.Models.html
@@ -289,12 +346,12 @@ references:
   commentId: Overload:MailHole.Api.Startup.#ctor
   fullName: MailHole.Api.Startup.Startup
   nameWithType: Startup.Startup
-- uid: MailHole.Api.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)
-  name: Configure(IApplicationBuilder, IHostingEnvironment)
-  href: api/MailHole.Api.Startup.html#MailHole_Api_Startup_Configure_Microsoft_AspNetCore_Builder_IApplicationBuilder_Microsoft_AspNetCore_Hosting_IHostingEnvironment_
-  commentId: M:MailHole.Api.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)
-  fullName: MailHole.Api.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder, Microsoft.AspNetCore.Hosting.IHostingEnvironment)
-  nameWithType: Startup.Configure(IApplicationBuilder, IHostingEnvironment)
+- uid: MailHole.Api.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.IServiceProvider,Microsoft.AspNetCore.Hosting.IHostingEnvironment)
+  name: Configure(IApplicationBuilder, IServiceProvider, IHostingEnvironment)
+  href: api/MailHole.Api.Startup.html#MailHole_Api_Startup_Configure_Microsoft_AspNetCore_Builder_IApplicationBuilder_System_IServiceProvider_Microsoft_AspNetCore_Hosting_IHostingEnvironment_
+  commentId: M:MailHole.Api.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.IServiceProvider,Microsoft.AspNetCore.Hosting.IHostingEnvironment)
+  fullName: MailHole.Api.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder, System.IServiceProvider, Microsoft.AspNetCore.Hosting.IHostingEnvironment)
+  nameWithType: Startup.Configure(IApplicationBuilder, IServiceProvider, IHostingEnvironment)
 - uid: MailHole.Api.Startup.Configure*
   name: Configure
   href: api/MailHole.Api.Startup.html#MailHole_Api_Startup_Configure_
@@ -313,6 +370,42 @@ references:
   commentId: Overload:MailHole.Api.Startup.ConfigureServices
   fullName: MailHole.Api.Startup.ConfigureServices
   nameWithType: Startup.ConfigureServices
+- uid: MailHole.Api.UnitTests
+  name: MailHole.Api.UnitTests
+  href: api/MailHole.Api.UnitTests.html
+  commentId: N:MailHole.Api.UnitTests
+  fullName: MailHole.Api.UnitTests
+  nameWithType: MailHole.Api.UnitTests
+- uid: MailHole.Api.UnitTests.UnitTest1
+  name: UnitTest1
+  href: api/MailHole.Api.UnitTests.UnitTest1.html
+  commentId: T:MailHole.Api.UnitTests.UnitTest1
+  fullName: MailHole.Api.UnitTests.UnitTest1
+  nameWithType: UnitTest1
+- uid: MailHole.Api.UnitTests.UnitTest1.Test1
+  name: Test1()
+  href: api/MailHole.Api.UnitTests.UnitTest1.html#MailHole_Api_UnitTests_UnitTest1_Test1
+  commentId: M:MailHole.Api.UnitTests.UnitTest1.Test1
+  fullName: MailHole.Api.UnitTests.UnitTest1.Test1()
+  nameWithType: UnitTest1.Test1()
+- uid: MailHole.Api.UnitTests.UnitTest1.Test1*
+  name: Test1
+  href: api/MailHole.Api.UnitTests.UnitTest1.html#MailHole_Api_UnitTests_UnitTest1_Test1_
+  commentId: Overload:MailHole.Api.UnitTests.UnitTest1.Test1
+  fullName: MailHole.Api.UnitTests.UnitTest1.Test1
+  nameWithType: UnitTest1.Test1
+- uid: MailHole.Common
+  name: MailHole.Common
+  href: api/MailHole.Common.html
+  commentId: N:MailHole.Common
+  fullName: MailHole.Common
+  nameWithType: MailHole.Common
+- uid: MailHole.Common.CleanupJob
+  name: CleanupJob
+  href: api/MailHole.Common.CleanupJob.html
+  commentId: T:MailHole.Common.CleanupJob
+  fullName: MailHole.Common.CleanupJob
+  nameWithType: CleanupJob
 - uid: MailHole.Common.Extensions
   name: MailHole.Common.Extensions
   href: api/MailHole.Common.Extensions.html
@@ -325,54 +418,162 @@ references:
   commentId: T:MailHole.Common.Extensions.ConfigExtensions
   fullName: MailHole.Common.Extensions.ConfigExtensions
   nameWithType: ConfigExtensions
-- uid: MailHole.Common.Extensions.ConfigExtensions.GetRedisConnectionString(Microsoft.Extensions.Configuration.IConfiguration)
-  name: GetRedisConnectionString(IConfiguration)
-  href: api/MailHole.Common.Extensions.ConfigExtensions.html#MailHole_Common_Extensions_ConfigExtensions_GetRedisConnectionString_Microsoft_Extensions_Configuration_IConfiguration_
-  commentId: M:MailHole.Common.Extensions.ConfigExtensions.GetRedisConnectionString(Microsoft.Extensions.Configuration.IConfiguration)
-  fullName: MailHole.Common.Extensions.ConfigExtensions.GetRedisConnectionString(Microsoft.Extensions.Configuration.IConfiguration)
-  nameWithType: ConfigExtensions.GetRedisConnectionString(IConfiguration)
-- uid: MailHole.Common.Extensions.ConfigExtensions.GetRedisConnectionString*
-  name: GetRedisConnectionString
-  href: api/MailHole.Common.Extensions.ConfigExtensions.html#MailHole_Common_Extensions_ConfigExtensions_GetRedisConnectionString_
-  commentId: Overload:MailHole.Common.Extensions.ConfigExtensions.GetRedisConnectionString
-  fullName: MailHole.Common.Extensions.ConfigExtensions.GetRedisConnectionString
-  nameWithType: ConfigExtensions.GetRedisConnectionString
-- uid: MailHole.Common.Extensions.ConfigExtensions.GetRedisDatabaseNumber(Microsoft.Extensions.Configuration.IConfiguration)
-  name: GetRedisDatabaseNumber(IConfiguration)
-  href: api/MailHole.Common.Extensions.ConfigExtensions.html#MailHole_Common_Extensions_ConfigExtensions_GetRedisDatabaseNumber_Microsoft_Extensions_Configuration_IConfiguration_
-  commentId: M:MailHole.Common.Extensions.ConfigExtensions.GetRedisDatabaseNumber(Microsoft.Extensions.Configuration.IConfiguration)
-  fullName: MailHole.Common.Extensions.ConfigExtensions.GetRedisDatabaseNumber(Microsoft.Extensions.Configuration.IConfiguration)
-  nameWithType: ConfigExtensions.GetRedisDatabaseNumber(IConfiguration)
-- uid: MailHole.Common.Extensions.ConfigExtensions.GetRedisDatabaseNumber*
-  name: GetRedisDatabaseNumber
-  href: api/MailHole.Common.Extensions.ConfigExtensions.html#MailHole_Common_Extensions_ConfigExtensions_GetRedisDatabaseNumber_
-  commentId: Overload:MailHole.Common.Extensions.ConfigExtensions.GetRedisDatabaseNumber
-  fullName: MailHole.Common.Extensions.ConfigExtensions.GetRedisDatabaseNumber
-  nameWithType: ConfigExtensions.GetRedisDatabaseNumber
-- uid: MailHole.Common.Extensions.ConfigExtensions.GetSmtpHostName(Microsoft.Extensions.Configuration.IConfiguration)
-  name: GetSmtpHostName(IConfiguration)
-  href: api/MailHole.Common.Extensions.ConfigExtensions.html#MailHole_Common_Extensions_ConfigExtensions_GetSmtpHostName_Microsoft_Extensions_Configuration_IConfiguration_
-  commentId: M:MailHole.Common.Extensions.ConfigExtensions.GetSmtpHostName(Microsoft.Extensions.Configuration.IConfiguration)
-  fullName: MailHole.Common.Extensions.ConfigExtensions.GetSmtpHostName(Microsoft.Extensions.Configuration.IConfiguration)
-  nameWithType: ConfigExtensions.GetSmtpHostName(IConfiguration)
-- uid: MailHole.Common.Extensions.ConfigExtensions.GetSmtpHostName*
-  name: GetSmtpHostName
-  href: api/MailHole.Common.Extensions.ConfigExtensions.html#MailHole_Common_Extensions_ConfigExtensions_GetSmtpHostName_
-  commentId: Overload:MailHole.Common.Extensions.ConfigExtensions.GetSmtpHostName
-  fullName: MailHole.Common.Extensions.ConfigExtensions.GetSmtpHostName
-  nameWithType: ConfigExtensions.GetSmtpHostName
-- uid: MailHole.Common.Extensions.ConfigExtensions.GetSmtpPorts(Microsoft.Extensions.Configuration.IConfiguration)
-  name: GetSmtpPorts(IConfiguration)
-  href: api/MailHole.Common.Extensions.ConfigExtensions.html#MailHole_Common_Extensions_ConfigExtensions_GetSmtpPorts_Microsoft_Extensions_Configuration_IConfiguration_
-  commentId: M:MailHole.Common.Extensions.ConfigExtensions.GetSmtpPorts(Microsoft.Extensions.Configuration.IConfiguration)
-  fullName: MailHole.Common.Extensions.ConfigExtensions.GetSmtpPorts(Microsoft.Extensions.Configuration.IConfiguration)
-  nameWithType: ConfigExtensions.GetSmtpPorts(IConfiguration)
-- uid: MailHole.Common.Extensions.ConfigExtensions.GetSmtpPorts*
-  name: GetSmtpPorts
-  href: api/MailHole.Common.Extensions.ConfigExtensions.html#MailHole_Common_Extensions_ConfigExtensions_GetSmtpPorts_
-  commentId: Overload:MailHole.Common.Extensions.ConfigExtensions.GetSmtpPorts
-  fullName: MailHole.Common.Extensions.ConfigExtensions.GetSmtpPorts
-  nameWithType: ConfigExtensions.GetSmtpPorts
+- uid: MailHole.Common.Extensions.ConfigExtensions.BindHangfireOptions(Microsoft.Extensions.Configuration.IConfiguration,MailHole.Common.Model.Options.HangfireOptions)
+  name: BindHangfireOptions(IConfiguration, HangfireOptions)
+  href: api/MailHole.Common.Extensions.ConfigExtensions.html#MailHole_Common_Extensions_ConfigExtensions_BindHangfireOptions_Microsoft_Extensions_Configuration_IConfiguration_MailHole_Common_Model_Options_HangfireOptions_
+  commentId: M:MailHole.Common.Extensions.ConfigExtensions.BindHangfireOptions(Microsoft.Extensions.Configuration.IConfiguration,MailHole.Common.Model.Options.HangfireOptions)
+  fullName: MailHole.Common.Extensions.ConfigExtensions.BindHangfireOptions(Microsoft.Extensions.Configuration.IConfiguration, MailHole.Common.Model.Options.HangfireOptions)
+  nameWithType: ConfigExtensions.BindHangfireOptions(IConfiguration, HangfireOptions)
+- uid: MailHole.Common.Extensions.ConfigExtensions.BindHangfireOptions*
+  name: BindHangfireOptions
+  href: api/MailHole.Common.Extensions.ConfigExtensions.html#MailHole_Common_Extensions_ConfigExtensions_BindHangfireOptions_
+  commentId: Overload:MailHole.Common.Extensions.ConfigExtensions.BindHangfireOptions
+  fullName: MailHole.Common.Extensions.ConfigExtensions.BindHangfireOptions
+  nameWithType: ConfigExtensions.BindHangfireOptions
+- uid: MailHole.Common.Extensions.ConfigExtensions.BindMinioOptions(Microsoft.Extensions.Configuration.IConfiguration,MailHole.Common.Model.Options.MinioOptions)
+  name: BindMinioOptions(IConfiguration, MinioOptions)
+  href: api/MailHole.Common.Extensions.ConfigExtensions.html#MailHole_Common_Extensions_ConfigExtensions_BindMinioOptions_Microsoft_Extensions_Configuration_IConfiguration_MailHole_Common_Model_Options_MinioOptions_
+  commentId: M:MailHole.Common.Extensions.ConfigExtensions.BindMinioOptions(Microsoft.Extensions.Configuration.IConfiguration,MailHole.Common.Model.Options.MinioOptions)
+  fullName: MailHole.Common.Extensions.ConfigExtensions.BindMinioOptions(Microsoft.Extensions.Configuration.IConfiguration, MailHole.Common.Model.Options.MinioOptions)
+  nameWithType: ConfigExtensions.BindMinioOptions(IConfiguration, MinioOptions)
+- uid: MailHole.Common.Extensions.ConfigExtensions.BindMinioOptions*
+  name: BindMinioOptions
+  href: api/MailHole.Common.Extensions.ConfigExtensions.html#MailHole_Common_Extensions_ConfigExtensions_BindMinioOptions_
+  commentId: Overload:MailHole.Common.Extensions.ConfigExtensions.BindMinioOptions
+  fullName: MailHole.Common.Extensions.ConfigExtensions.BindMinioOptions
+  nameWithType: ConfigExtensions.BindMinioOptions
+- uid: MailHole.Common.Extensions.ConfigExtensions.BindRedisOptions(Microsoft.Extensions.Configuration.IConfiguration,MailHole.Common.Model.Options.RedisOptions)
+  name: BindRedisOptions(IConfiguration, RedisOptions)
+  href: api/MailHole.Common.Extensions.ConfigExtensions.html#MailHole_Common_Extensions_ConfigExtensions_BindRedisOptions_Microsoft_Extensions_Configuration_IConfiguration_MailHole_Common_Model_Options_RedisOptions_
+  commentId: M:MailHole.Common.Extensions.ConfigExtensions.BindRedisOptions(Microsoft.Extensions.Configuration.IConfiguration,MailHole.Common.Model.Options.RedisOptions)
+  fullName: MailHole.Common.Extensions.ConfigExtensions.BindRedisOptions(Microsoft.Extensions.Configuration.IConfiguration, MailHole.Common.Model.Options.RedisOptions)
+  nameWithType: ConfigExtensions.BindRedisOptions(IConfiguration, RedisOptions)
+- uid: MailHole.Common.Extensions.ConfigExtensions.BindRedisOptions*
+  name: BindRedisOptions
+  href: api/MailHole.Common.Extensions.ConfigExtensions.html#MailHole_Common_Extensions_ConfigExtensions_BindRedisOptions_
+  commentId: Overload:MailHole.Common.Extensions.ConfigExtensions.BindRedisOptions
+  fullName: MailHole.Common.Extensions.ConfigExtensions.BindRedisOptions
+  nameWithType: ConfigExtensions.BindRedisOptions
+- uid: MailHole.Common.Extensions.ConfigExtensions.BindSmtpOptions(Microsoft.Extensions.Configuration.IConfiguration,MailHole.Common.Model.Options.SmtpOptions)
+  name: BindSmtpOptions(IConfiguration, SmtpOptions)
+  href: api/MailHole.Common.Extensions.ConfigExtensions.html#MailHole_Common_Extensions_ConfigExtensions_BindSmtpOptions_Microsoft_Extensions_Configuration_IConfiguration_MailHole_Common_Model_Options_SmtpOptions_
+  commentId: M:MailHole.Common.Extensions.ConfigExtensions.BindSmtpOptions(Microsoft.Extensions.Configuration.IConfiguration,MailHole.Common.Model.Options.SmtpOptions)
+  fullName: MailHole.Common.Extensions.ConfigExtensions.BindSmtpOptions(Microsoft.Extensions.Configuration.IConfiguration, MailHole.Common.Model.Options.SmtpOptions)
+  nameWithType: ConfigExtensions.BindSmtpOptions(IConfiguration, SmtpOptions)
+- uid: MailHole.Common.Extensions.ConfigExtensions.BindSmtpOptions*
+  name: BindSmtpOptions
+  href: api/MailHole.Common.Extensions.ConfigExtensions.html#MailHole_Common_Extensions_ConfigExtensions_BindSmtpOptions_
+  commentId: Overload:MailHole.Common.Extensions.ConfigExtensions.BindSmtpOptions
+  fullName: MailHole.Common.Extensions.ConfigExtensions.BindSmtpOptions
+  nameWithType: ConfigExtensions.BindSmtpOptions
+- uid: MailHole.Common.Extensions.ConfigExtensions.ConfigureMailHoleOptions(IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)
+  name: ConfigureMailHoleOptions(IServiceCollection, IConfiguration)
+  href: api/MailHole.Common.Extensions.ConfigExtensions.html#MailHole_Common_Extensions_ConfigExtensions_ConfigureMailHoleOptions_IServiceCollection_Microsoft_Extensions_Configuration_IConfiguration_
+  commentId: M:MailHole.Common.Extensions.ConfigExtensions.ConfigureMailHoleOptions(IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)
+  fullName: MailHole.Common.Extensions.ConfigExtensions.ConfigureMailHoleOptions(IServiceCollection, Microsoft.Extensions.Configuration.IConfiguration)
+  nameWithType: ConfigExtensions.ConfigureMailHoleOptions(IServiceCollection, IConfiguration)
+- uid: MailHole.Common.Extensions.ConfigExtensions.ConfigureMailHoleOptions*
+  name: ConfigureMailHoleOptions
+  href: api/MailHole.Common.Extensions.ConfigExtensions.html#MailHole_Common_Extensions_ConfigExtensions_ConfigureMailHoleOptions_
+  commentId: Overload:MailHole.Common.Extensions.ConfigExtensions.ConfigureMailHoleOptions
+  fullName: MailHole.Common.Extensions.ConfigExtensions.ConfigureMailHoleOptions
+  nameWithType: ConfigExtensions.ConfigureMailHoleOptions
+- uid: MailHole.Common.Extensions.ConfigExtensions.GetHangfireOptionsOrDefault(System.IServiceProvider)
+  name: GetHangfireOptionsOrDefault(IServiceProvider)
+  href: api/MailHole.Common.Extensions.ConfigExtensions.html#MailHole_Common_Extensions_ConfigExtensions_GetHangfireOptionsOrDefault_System_IServiceProvider_
+  commentId: M:MailHole.Common.Extensions.ConfigExtensions.GetHangfireOptionsOrDefault(System.IServiceProvider)
+  fullName: MailHole.Common.Extensions.ConfigExtensions.GetHangfireOptionsOrDefault(System.IServiceProvider)
+  nameWithType: ConfigExtensions.GetHangfireOptionsOrDefault(IServiceProvider)
+- uid: MailHole.Common.Extensions.ConfigExtensions.GetHangfireOptionsOrDefault*
+  name: GetHangfireOptionsOrDefault
+  href: api/MailHole.Common.Extensions.ConfigExtensions.html#MailHole_Common_Extensions_ConfigExtensions_GetHangfireOptionsOrDefault_
+  commentId: Overload:MailHole.Common.Extensions.ConfigExtensions.GetHangfireOptionsOrDefault
+  fullName: MailHole.Common.Extensions.ConfigExtensions.GetHangfireOptionsOrDefault
+  nameWithType: ConfigExtensions.GetHangfireOptionsOrDefault
+- uid: MailHole.Common.Extensions.ConfigExtensions.GetMinioOptionsOrDefault(System.IServiceProvider)
+  name: GetMinioOptionsOrDefault(IServiceProvider)
+  href: api/MailHole.Common.Extensions.ConfigExtensions.html#MailHole_Common_Extensions_ConfigExtensions_GetMinioOptionsOrDefault_System_IServiceProvider_
+  commentId: M:MailHole.Common.Extensions.ConfigExtensions.GetMinioOptionsOrDefault(System.IServiceProvider)
+  fullName: MailHole.Common.Extensions.ConfigExtensions.GetMinioOptionsOrDefault(System.IServiceProvider)
+  nameWithType: ConfigExtensions.GetMinioOptionsOrDefault(IServiceProvider)
+- uid: MailHole.Common.Extensions.ConfigExtensions.GetMinioOptionsOrDefault*
+  name: GetMinioOptionsOrDefault
+  href: api/MailHole.Common.Extensions.ConfigExtensions.html#MailHole_Common_Extensions_ConfigExtensions_GetMinioOptionsOrDefault_
+  commentId: Overload:MailHole.Common.Extensions.ConfigExtensions.GetMinioOptionsOrDefault
+  fullName: MailHole.Common.Extensions.ConfigExtensions.GetMinioOptionsOrDefault
+  nameWithType: ConfigExtensions.GetMinioOptionsOrDefault
+- uid: MailHole.Common.Extensions.ConfigExtensions.GetRedisOptionsOrDefault(System.IServiceProvider)
+  name: GetRedisOptionsOrDefault(IServiceProvider)
+  href: api/MailHole.Common.Extensions.ConfigExtensions.html#MailHole_Common_Extensions_ConfigExtensions_GetRedisOptionsOrDefault_System_IServiceProvider_
+  commentId: M:MailHole.Common.Extensions.ConfigExtensions.GetRedisOptionsOrDefault(System.IServiceProvider)
+  fullName: MailHole.Common.Extensions.ConfigExtensions.GetRedisOptionsOrDefault(System.IServiceProvider)
+  nameWithType: ConfigExtensions.GetRedisOptionsOrDefault(IServiceProvider)
+- uid: MailHole.Common.Extensions.ConfigExtensions.GetRedisOptionsOrDefault*
+  name: GetRedisOptionsOrDefault
+  href: api/MailHole.Common.Extensions.ConfigExtensions.html#MailHole_Common_Extensions_ConfigExtensions_GetRedisOptionsOrDefault_
+  commentId: Overload:MailHole.Common.Extensions.ConfigExtensions.GetRedisOptionsOrDefault
+  fullName: MailHole.Common.Extensions.ConfigExtensions.GetRedisOptionsOrDefault
+  nameWithType: ConfigExtensions.GetRedisOptionsOrDefault
+- uid: MailHole.Common.Extensions.ConfigExtensions.GetSmtpOptionsOrDefault(System.IServiceProvider)
+  name: GetSmtpOptionsOrDefault(IServiceProvider)
+  href: api/MailHole.Common.Extensions.ConfigExtensions.html#MailHole_Common_Extensions_ConfigExtensions_GetSmtpOptionsOrDefault_System_IServiceProvider_
+  commentId: M:MailHole.Common.Extensions.ConfigExtensions.GetSmtpOptionsOrDefault(System.IServiceProvider)
+  fullName: MailHole.Common.Extensions.ConfigExtensions.GetSmtpOptionsOrDefault(System.IServiceProvider)
+  nameWithType: ConfigExtensions.GetSmtpOptionsOrDefault(IServiceProvider)
+- uid: MailHole.Common.Extensions.ConfigExtensions.GetSmtpOptionsOrDefault*
+  name: GetSmtpOptionsOrDefault
+  href: api/MailHole.Common.Extensions.ConfigExtensions.html#MailHole_Common_Extensions_ConfigExtensions_GetSmtpOptionsOrDefault_
+  commentId: Overload:MailHole.Common.Extensions.ConfigExtensions.GetSmtpOptionsOrDefault
+  fullName: MailHole.Common.Extensions.ConfigExtensions.GetSmtpOptionsOrDefault
+  nameWithType: ConfigExtensions.GetSmtpOptionsOrDefault
+- uid: MailHole.Common.HangfireExtensions
+  name: MailHole.Common.HangfireExtensions
+  href: api/MailHole.Common.HangfireExtensions.html
+  commentId: N:MailHole.Common.HangfireExtensions
+  fullName: MailHole.Common.HangfireExtensions
+  nameWithType: MailHole.Common.HangfireExtensions
+- uid: MailHole.Common.HangfireExtensions.HangfireActivator
+  name: HangfireActivator
+  href: api/MailHole.Common.HangfireExtensions.HangfireActivator.html
+  commentId: T:MailHole.Common.HangfireExtensions.HangfireActivator
+  fullName: MailHole.Common.HangfireExtensions.HangfireActivator
+  nameWithType: HangfireActivator
+- uid: MailHole.Common.HangfireExtensions.HangfireActivator.#ctor(System.IServiceProvider)
+  name: HangfireActivator(IServiceProvider)
+  href: api/MailHole.Common.HangfireExtensions.HangfireActivator.html#MailHole_Common_HangfireExtensions_HangfireActivator__ctor_System_IServiceProvider_
+  commentId: M:MailHole.Common.HangfireExtensions.HangfireActivator.#ctor(System.IServiceProvider)
+  fullName: MailHole.Common.HangfireExtensions.HangfireActivator.HangfireActivator(System.IServiceProvider)
+  nameWithType: HangfireActivator.HangfireActivator(IServiceProvider)
+- uid: MailHole.Common.HangfireExtensions.HangfireActivator.#ctor*
+  name: HangfireActivator
+  href: api/MailHole.Common.HangfireExtensions.HangfireActivator.html#MailHole_Common_HangfireExtensions_HangfireActivator__ctor_
+  commentId: Overload:MailHole.Common.HangfireExtensions.HangfireActivator.#ctor
+  fullName: MailHole.Common.HangfireExtensions.HangfireActivator.HangfireActivator
+  nameWithType: HangfireActivator.HangfireActivator
+- uid: MailHole.Common.HangfireExtensions.HangfireActivator.ActivateJob(System.Type)
+  name: ActivateJob(Type)
+  href: api/MailHole.Common.HangfireExtensions.HangfireActivator.html#MailHole_Common_HangfireExtensions_HangfireActivator_ActivateJob_System_Type_
+  commentId: M:MailHole.Common.HangfireExtensions.HangfireActivator.ActivateJob(System.Type)
+  fullName: MailHole.Common.HangfireExtensions.HangfireActivator.ActivateJob(System.Type)
+  nameWithType: HangfireActivator.ActivateJob(Type)
+- uid: MailHole.Common.HangfireExtensions.HangfireActivator.ActivateJob*
+  name: ActivateJob
+  href: api/MailHole.Common.HangfireExtensions.HangfireActivator.html#MailHole_Common_HangfireExtensions_HangfireActivator_ActivateJob_
+  commentId: Overload:MailHole.Common.HangfireExtensions.HangfireActivator.ActivateJob
+  fullName: MailHole.Common.HangfireExtensions.HangfireActivator.ActivateJob
+  nameWithType: HangfireActivator.ActivateJob
+- uid: MailHole.Common.MailHoleConstants
+  name: MailHoleConstants
+  href: api/MailHole.Common.MailHoleConstants.html
+  commentId: T:MailHole.Common.MailHoleConstants
+  fullName: MailHole.Common.MailHoleConstants
+  nameWithType: MailHoleConstants
+- uid: MailHole.Common.MailHoleConstants.MailGuidHeader
+  name: MailGuidHeader
+  href: api/MailHole.Common.MailHoleConstants.html#MailHole_Common_MailHoleConstants_MailGuidHeader
+  commentId: F:MailHole.Common.MailHoleConstants.MailGuidHeader
+  fullName: MailHole.Common.MailHoleConstants.MailGuidHeader
+  nameWithType: MailHoleConstants.MailGuidHeader
 - uid: MailHole.Common.Model
   name: MailHole.Common.Model
   href: api/MailHole.Common.Model.html
@@ -385,6 +586,168 @@ references:
   commentId: T:MailHole.Common.Model.AttachementInfo
   fullName: MailHole.Common.Model.AttachementInfo
   nameWithType: AttachementInfo
+- uid: MailHole.Common.Model.Options
+  name: MailHole.Common.Model.Options
+  href: api/MailHole.Common.Model.Options.html
+  commentId: N:MailHole.Common.Model.Options
+  fullName: MailHole.Common.Model.Options
+  nameWithType: MailHole.Common.Model.Options
+- uid: MailHole.Common.Model.Options.HangfireOptions
+  name: HangfireOptions
+  href: api/MailHole.Common.Model.Options.HangfireOptions.html
+  commentId: T:MailHole.Common.Model.Options.HangfireOptions
+  fullName: MailHole.Common.Model.Options.HangfireOptions
+  nameWithType: HangfireOptions
+- uid: MailHole.Common.Model.Options.HangfireOptions.RedisConnectionString
+  name: RedisConnectionString
+  href: api/MailHole.Common.Model.Options.HangfireOptions.html#MailHole_Common_Model_Options_HangfireOptions_RedisConnectionString
+  commentId: P:MailHole.Common.Model.Options.HangfireOptions.RedisConnectionString
+  fullName: MailHole.Common.Model.Options.HangfireOptions.RedisConnectionString
+  nameWithType: HangfireOptions.RedisConnectionString
+- uid: MailHole.Common.Model.Options.HangfireOptions.RedisConnectionString*
+  name: RedisConnectionString
+  href: api/MailHole.Common.Model.Options.HangfireOptions.html#MailHole_Common_Model_Options_HangfireOptions_RedisConnectionString_
+  commentId: Overload:MailHole.Common.Model.Options.HangfireOptions.RedisConnectionString
+  fullName: MailHole.Common.Model.Options.HangfireOptions.RedisConnectionString
+  nameWithType: HangfireOptions.RedisConnectionString
+- uid: MailHole.Common.Model.Options.HangfireOptions.RedisDatabaseIndex
+  name: RedisDatabaseIndex
+  href: api/MailHole.Common.Model.Options.HangfireOptions.html#MailHole_Common_Model_Options_HangfireOptions_RedisDatabaseIndex
+  commentId: P:MailHole.Common.Model.Options.HangfireOptions.RedisDatabaseIndex
+  fullName: MailHole.Common.Model.Options.HangfireOptions.RedisDatabaseIndex
+  nameWithType: HangfireOptions.RedisDatabaseIndex
+- uid: MailHole.Common.Model.Options.HangfireOptions.RedisDatabaseIndex*
+  name: RedisDatabaseIndex
+  href: api/MailHole.Common.Model.Options.HangfireOptions.html#MailHole_Common_Model_Options_HangfireOptions_RedisDatabaseIndex_
+  commentId: Overload:MailHole.Common.Model.Options.HangfireOptions.RedisDatabaseIndex
+  fullName: MailHole.Common.Model.Options.HangfireOptions.RedisDatabaseIndex
+  nameWithType: HangfireOptions.RedisDatabaseIndex
+- uid: MailHole.Common.Model.Options.HangfireOptions.RedisPrefix
+  name: RedisPrefix
+  href: api/MailHole.Common.Model.Options.HangfireOptions.html#MailHole_Common_Model_Options_HangfireOptions_RedisPrefix
+  commentId: P:MailHole.Common.Model.Options.HangfireOptions.RedisPrefix
+  fullName: MailHole.Common.Model.Options.HangfireOptions.RedisPrefix
+  nameWithType: HangfireOptions.RedisPrefix
+- uid: MailHole.Common.Model.Options.HangfireOptions.RedisPrefix*
+  name: RedisPrefix
+  href: api/MailHole.Common.Model.Options.HangfireOptions.html#MailHole_Common_Model_Options_HangfireOptions_RedisPrefix_
+  commentId: Overload:MailHole.Common.Model.Options.HangfireOptions.RedisPrefix
+  fullName: MailHole.Common.Model.Options.HangfireOptions.RedisPrefix
+  nameWithType: HangfireOptions.RedisPrefix
+- uid: MailHole.Common.Model.Options.MinioOptions
+  name: MinioOptions
+  href: api/MailHole.Common.Model.Options.MinioOptions.html
+  commentId: T:MailHole.Common.Model.Options.MinioOptions
+  fullName: MailHole.Common.Model.Options.MinioOptions
+  nameWithType: MinioOptions
+- uid: MailHole.Common.Model.Options.MinioOptions.AccessKey
+  name: AccessKey
+  href: api/MailHole.Common.Model.Options.MinioOptions.html#MailHole_Common_Model_Options_MinioOptions_AccessKey
+  commentId: P:MailHole.Common.Model.Options.MinioOptions.AccessKey
+  fullName: MailHole.Common.Model.Options.MinioOptions.AccessKey
+  nameWithType: MinioOptions.AccessKey
+- uid: MailHole.Common.Model.Options.MinioOptions.AccessKey*
+  name: AccessKey
+  href: api/MailHole.Common.Model.Options.MinioOptions.html#MailHole_Common_Model_Options_MinioOptions_AccessKey_
+  commentId: Overload:MailHole.Common.Model.Options.MinioOptions.AccessKey
+  fullName: MailHole.Common.Model.Options.MinioOptions.AccessKey
+  nameWithType: MinioOptions.AccessKey
+- uid: MailHole.Common.Model.Options.MinioOptions.Endpoint
+  name: Endpoint
+  href: api/MailHole.Common.Model.Options.MinioOptions.html#MailHole_Common_Model_Options_MinioOptions_Endpoint
+  commentId: P:MailHole.Common.Model.Options.MinioOptions.Endpoint
+  fullName: MailHole.Common.Model.Options.MinioOptions.Endpoint
+  nameWithType: MinioOptions.Endpoint
+- uid: MailHole.Common.Model.Options.MinioOptions.Endpoint*
+  name: Endpoint
+  href: api/MailHole.Common.Model.Options.MinioOptions.html#MailHole_Common_Model_Options_MinioOptions_Endpoint_
+  commentId: Overload:MailHole.Common.Model.Options.MinioOptions.Endpoint
+  fullName: MailHole.Common.Model.Options.MinioOptions.Endpoint
+  nameWithType: MinioOptions.Endpoint
+- uid: MailHole.Common.Model.Options.MinioOptions.Region
+  name: Region
+  href: api/MailHole.Common.Model.Options.MinioOptions.html#MailHole_Common_Model_Options_MinioOptions_Region
+  commentId: P:MailHole.Common.Model.Options.MinioOptions.Region
+  fullName: MailHole.Common.Model.Options.MinioOptions.Region
+  nameWithType: MinioOptions.Region
+- uid: MailHole.Common.Model.Options.MinioOptions.Region*
+  name: Region
+  href: api/MailHole.Common.Model.Options.MinioOptions.html#MailHole_Common_Model_Options_MinioOptions_Region_
+  commentId: Overload:MailHole.Common.Model.Options.MinioOptions.Region
+  fullName: MailHole.Common.Model.Options.MinioOptions.Region
+  nameWithType: MinioOptions.Region
+- uid: MailHole.Common.Model.Options.MinioOptions.SecretKey
+  name: SecretKey
+  href: api/MailHole.Common.Model.Options.MinioOptions.html#MailHole_Common_Model_Options_MinioOptions_SecretKey
+  commentId: P:MailHole.Common.Model.Options.MinioOptions.SecretKey
+  fullName: MailHole.Common.Model.Options.MinioOptions.SecretKey
+  nameWithType: MinioOptions.SecretKey
+- uid: MailHole.Common.Model.Options.MinioOptions.SecretKey*
+  name: SecretKey
+  href: api/MailHole.Common.Model.Options.MinioOptions.html#MailHole_Common_Model_Options_MinioOptions_SecretKey_
+  commentId: Overload:MailHole.Common.Model.Options.MinioOptions.SecretKey
+  fullName: MailHole.Common.Model.Options.MinioOptions.SecretKey
+  nameWithType: MinioOptions.SecretKey
+- uid: MailHole.Common.Model.Options.RedisOptions
+  name: RedisOptions
+  href: api/MailHole.Common.Model.Options.RedisOptions.html
+  commentId: T:MailHole.Common.Model.Options.RedisOptions
+  fullName: MailHole.Common.Model.Options.RedisOptions
+  nameWithType: RedisOptions
+- uid: MailHole.Common.Model.Options.RedisOptions.ConnectionString
+  name: ConnectionString
+  href: api/MailHole.Common.Model.Options.RedisOptions.html#MailHole_Common_Model_Options_RedisOptions_ConnectionString
+  commentId: P:MailHole.Common.Model.Options.RedisOptions.ConnectionString
+  fullName: MailHole.Common.Model.Options.RedisOptions.ConnectionString
+  nameWithType: RedisOptions.ConnectionString
+- uid: MailHole.Common.Model.Options.RedisOptions.ConnectionString*
+  name: ConnectionString
+  href: api/MailHole.Common.Model.Options.RedisOptions.html#MailHole_Common_Model_Options_RedisOptions_ConnectionString_
+  commentId: Overload:MailHole.Common.Model.Options.RedisOptions.ConnectionString
+  fullName: MailHole.Common.Model.Options.RedisOptions.ConnectionString
+  nameWithType: RedisOptions.ConnectionString
+- uid: MailHole.Common.Model.Options.RedisOptions.DatabaseIndex
+  name: DatabaseIndex
+  href: api/MailHole.Common.Model.Options.RedisOptions.html#MailHole_Common_Model_Options_RedisOptions_DatabaseIndex
+  commentId: P:MailHole.Common.Model.Options.RedisOptions.DatabaseIndex
+  fullName: MailHole.Common.Model.Options.RedisOptions.DatabaseIndex
+  nameWithType: RedisOptions.DatabaseIndex
+- uid: MailHole.Common.Model.Options.RedisOptions.DatabaseIndex*
+  name: DatabaseIndex
+  href: api/MailHole.Common.Model.Options.RedisOptions.html#MailHole_Common_Model_Options_RedisOptions_DatabaseIndex_
+  commentId: Overload:MailHole.Common.Model.Options.RedisOptions.DatabaseIndex
+  fullName: MailHole.Common.Model.Options.RedisOptions.DatabaseIndex
+  nameWithType: RedisOptions.DatabaseIndex
+- uid: MailHole.Common.Model.Options.SmtpOptions
+  name: SmtpOptions
+  href: api/MailHole.Common.Model.Options.SmtpOptions.html
+  commentId: T:MailHole.Common.Model.Options.SmtpOptions
+  fullName: MailHole.Common.Model.Options.SmtpOptions
+  nameWithType: SmtpOptions
+- uid: MailHole.Common.Model.Options.SmtpOptions.HostName
+  name: HostName
+  href: api/MailHole.Common.Model.Options.SmtpOptions.html#MailHole_Common_Model_Options_SmtpOptions_HostName
+  commentId: P:MailHole.Common.Model.Options.SmtpOptions.HostName
+  fullName: MailHole.Common.Model.Options.SmtpOptions.HostName
+  nameWithType: SmtpOptions.HostName
+- uid: MailHole.Common.Model.Options.SmtpOptions.HostName*
+  name: HostName
+  href: api/MailHole.Common.Model.Options.SmtpOptions.html#MailHole_Common_Model_Options_SmtpOptions_HostName_
+  commentId: Overload:MailHole.Common.Model.Options.SmtpOptions.HostName
+  fullName: MailHole.Common.Model.Options.SmtpOptions.HostName
+  nameWithType: SmtpOptions.HostName
+- uid: MailHole.Common.Model.Options.SmtpOptions.Port
+  name: Port
+  href: api/MailHole.Common.Model.Options.SmtpOptions.html#MailHole_Common_Model_Options_SmtpOptions_Port
+  commentId: P:MailHole.Common.Model.Options.SmtpOptions.Port
+  fullName: MailHole.Common.Model.Options.SmtpOptions.Port
+  nameWithType: SmtpOptions.Port
+- uid: MailHole.Common.Model.Options.SmtpOptions.Port*
+  name: Port
+  href: api/MailHole.Common.Model.Options.SmtpOptions.html#MailHole_Common_Model_Options_SmtpOptions_Port_
+  commentId: Overload:MailHole.Common.Model.Options.SmtpOptions.Port
+  fullName: MailHole.Common.Model.Options.SmtpOptions.Port
+  nameWithType: SmtpOptions.Port
 - uid: MailHole.Common.Model.ReceivedMail
   name: ReceivedMail
   href: api/MailHole.Common.Model.ReceivedMail.html
@@ -547,6 +910,69 @@ references:
   commentId: Overload:MailHole.SmtpListener.Extensions.ModelExtensions.ToReceivedMail
   fullName: MailHole.SmtpListener.Extensions.ModelExtensions.ToReceivedMail
   nameWithType: ModelExtensions.ToReceivedMail
+- uid: MailHole.SmtpListener.IntegrationTests
+  name: MailHole.SmtpListener.IntegrationTests
+  href: api/MailHole.SmtpListener.IntegrationTests.html
+  commentId: N:MailHole.SmtpListener.IntegrationTests
+  fullName: MailHole.SmtpListener.IntegrationTests
+  nameWithType: MailHole.SmtpListener.IntegrationTests
+- uid: MailHole.SmtpListener.IntegrationTests.RedisMinioStorageJobTest
+  name: RedisMinioStorageJobTest
+  href: api/MailHole.SmtpListener.IntegrationTests.RedisMinioStorageJobTest.html
+  commentId: T:MailHole.SmtpListener.IntegrationTests.RedisMinioStorageJobTest
+  fullName: MailHole.SmtpListener.IntegrationTests.RedisMinioStorageJobTest
+  nameWithType: RedisMinioStorageJobTest
+- uid: MailHole.SmtpListener.IntegrationTests.RedisMinioStorageJobTest.SendTestMail
+  name: SendTestMail()
+  href: api/MailHole.SmtpListener.IntegrationTests.RedisMinioStorageJobTest.html#MailHole_SmtpListener_IntegrationTests_RedisMinioStorageJobTest_SendTestMail
+  commentId: M:MailHole.SmtpListener.IntegrationTests.RedisMinioStorageJobTest.SendTestMail
+  fullName: MailHole.SmtpListener.IntegrationTests.RedisMinioStorageJobTest.SendTestMail()
+  nameWithType: RedisMinioStorageJobTest.SendTestMail()
+- uid: MailHole.SmtpListener.IntegrationTests.RedisMinioStorageJobTest.SendTestMail*
+  name: SendTestMail
+  href: api/MailHole.SmtpListener.IntegrationTests.RedisMinioStorageJobTest.html#MailHole_SmtpListener_IntegrationTests_RedisMinioStorageJobTest_SendTestMail_
+  commentId: Overload:MailHole.SmtpListener.IntegrationTests.RedisMinioStorageJobTest.SendTestMail
+  fullName: MailHole.SmtpListener.IntegrationTests.RedisMinioStorageJobTest.SendTestMail
+  nameWithType: RedisMinioStorageJobTest.SendTestMail
+- uid: MailHole.SmtpListener.Jobs
+  name: MailHole.SmtpListener.Jobs
+  href: api/MailHole.SmtpListener.Jobs.html
+  commentId: N:MailHole.SmtpListener.Jobs
+  fullName: MailHole.SmtpListener.Jobs
+  nameWithType: MailHole.SmtpListener.Jobs
+- uid: MailHole.SmtpListener.Jobs.RedisMinioStoreJob
+  name: RedisMinioStoreJob
+  href: api/MailHole.SmtpListener.Jobs.RedisMinioStoreJob.html
+  commentId: T:MailHole.SmtpListener.Jobs.RedisMinioStoreJob
+  fullName: MailHole.SmtpListener.Jobs.RedisMinioStoreJob
+  nameWithType: RedisMinioStoreJob
+- uid: MailHole.SmtpListener.Jobs.RedisMinioStoreJob.#ctor(StackExchange.Redis.IDatabase)
+  name: RedisMinioStoreJob(IDatabase)
+  href: api/MailHole.SmtpListener.Jobs.RedisMinioStoreJob.html#MailHole_SmtpListener_Jobs_RedisMinioStoreJob__ctor_StackExchange_Redis_IDatabase_
+  commentId: M:MailHole.SmtpListener.Jobs.RedisMinioStoreJob.#ctor(StackExchange.Redis.IDatabase)
+  fullName: MailHole.SmtpListener.Jobs.RedisMinioStoreJob.RedisMinioStoreJob(StackExchange.Redis.IDatabase)
+  nameWithType: RedisMinioStoreJob.RedisMinioStoreJob(IDatabase)
+- uid: MailHole.SmtpListener.Jobs.RedisMinioStoreJob.#ctor*
+  name: RedisMinioStoreJob
+  href: api/MailHole.SmtpListener.Jobs.RedisMinioStoreJob.html#MailHole_SmtpListener_Jobs_RedisMinioStoreJob__ctor_
+  commentId: Overload:MailHole.SmtpListener.Jobs.RedisMinioStoreJob.#ctor
+  fullName: MailHole.SmtpListener.Jobs.RedisMinioStoreJob.RedisMinioStoreJob
+  nameWithType: RedisMinioStoreJob.RedisMinioStoreJob
+- uid: MailHole.SmtpListener.Jobs.RedisMinioStoreJob.StoreMail(System.Collections.Generic.List{System.String},System.String,MailHole.Common.Model.ReceivedMail)
+  name: StoreMail(List<String>, String, ReceivedMail)
+  href: api/MailHole.SmtpListener.Jobs.RedisMinioStoreJob.html#MailHole_SmtpListener_Jobs_RedisMinioStoreJob_StoreMail_System_Collections_Generic_List_System_String__System_String_MailHole_Common_Model_ReceivedMail_
+  commentId: M:MailHole.SmtpListener.Jobs.RedisMinioStoreJob.StoreMail(System.Collections.Generic.List{System.String},System.String,MailHole.Common.Model.ReceivedMail)
+  name.vb: StoreMail(List(Of String), String, ReceivedMail)
+  fullName: MailHole.SmtpListener.Jobs.RedisMinioStoreJob.StoreMail(System.Collections.Generic.List<System.String>, System.String, MailHole.Common.Model.ReceivedMail)
+  fullName.vb: MailHole.SmtpListener.Jobs.RedisMinioStoreJob.StoreMail(System.Collections.Generic.List(Of System.String), System.String, MailHole.Common.Model.ReceivedMail)
+  nameWithType: RedisMinioStoreJob.StoreMail(List<String>, String, ReceivedMail)
+  nameWithType.vb: RedisMinioStoreJob.StoreMail(List(Of String), String, ReceivedMail)
+- uid: MailHole.SmtpListener.Jobs.RedisMinioStoreJob.StoreMail*
+  name: StoreMail
+  href: api/MailHole.SmtpListener.Jobs.RedisMinioStoreJob.html#MailHole_SmtpListener_Jobs_RedisMinioStoreJob_StoreMail_
+  commentId: Overload:MailHole.SmtpListener.Jobs.RedisMinioStoreJob.StoreMail
+  fullName: MailHole.SmtpListener.Jobs.RedisMinioStoreJob.StoreMail
+  nameWithType: RedisMinioStoreJob.StoreMail
 - uid: MailHole.SmtpListener.Persistence
   name: MailHole.SmtpListener.Persistence
   href: api/MailHole.SmtpListener.Persistence.html
@@ -559,12 +985,12 @@ references:
   commentId: T:MailHole.SmtpListener.Persistence.RedisMinioMailStore
   fullName: MailHole.SmtpListener.Persistence.RedisMinioMailStore
   nameWithType: RedisMinioMailStore
-- uid: MailHole.SmtpListener.Persistence.RedisMinioMailStore.#ctor(System.String,System.Int32)
-  name: RedisMinioMailStore(String, Int32)
-  href: api/MailHole.SmtpListener.Persistence.RedisMinioMailStore.html#MailHole_SmtpListener_Persistence_RedisMinioMailStore__ctor_System_String_System_Int32_
-  commentId: M:MailHole.SmtpListener.Persistence.RedisMinioMailStore.#ctor(System.String,System.Int32)
-  fullName: MailHole.SmtpListener.Persistence.RedisMinioMailStore.RedisMinioMailStore(System.String, System.Int32)
-  nameWithType: RedisMinioMailStore.RedisMinioMailStore(String, Int32)
+- uid: MailHole.SmtpListener.Persistence.RedisMinioMailStore.#ctor(IBackgroundJobClient)
+  name: RedisMinioMailStore(IBackgroundJobClient)
+  href: api/MailHole.SmtpListener.Persistence.RedisMinioMailStore.html#MailHole_SmtpListener_Persistence_RedisMinioMailStore__ctor_IBackgroundJobClient_
+  commentId: M:MailHole.SmtpListener.Persistence.RedisMinioMailStore.#ctor(IBackgroundJobClient)
+  fullName: MailHole.SmtpListener.Persistence.RedisMinioMailStore.RedisMinioMailStore(IBackgroundJobClient)
+  nameWithType: RedisMinioMailStore.RedisMinioMailStore(IBackgroundJobClient)
 - uid: MailHole.SmtpListener.Persistence.RedisMinioMailStore.#ctor*
   name: RedisMinioMailStore
   href: api/MailHole.SmtpListener.Persistence.RedisMinioMailStore.html#MailHole_SmtpListener_Persistence_RedisMinioMailStore__ctor_
@@ -604,3 +1030,27 @@ references:
   commentId: Overload:MailHole.SmtpListener.Program.Main
   fullName: MailHole.SmtpListener.Program.Main
   nameWithType: Program.Main
+- uid: MailHole.SmtpListener.UnitTests
+  name: MailHole.SmtpListener.UnitTests
+  href: api/MailHole.SmtpListener.UnitTests.html
+  commentId: N:MailHole.SmtpListener.UnitTests
+  fullName: MailHole.SmtpListener.UnitTests
+  nameWithType: MailHole.SmtpListener.UnitTests
+- uid: MailHole.SmtpListener.UnitTests.UnitTest1
+  name: UnitTest1
+  href: api/MailHole.SmtpListener.UnitTests.UnitTest1.html
+  commentId: T:MailHole.SmtpListener.UnitTests.UnitTest1
+  fullName: MailHole.SmtpListener.UnitTests.UnitTest1
+  nameWithType: UnitTest1
+- uid: MailHole.SmtpListener.UnitTests.UnitTest1.Test1
+  name: Test1()
+  href: api/MailHole.SmtpListener.UnitTests.UnitTest1.html#MailHole_SmtpListener_UnitTests_UnitTest1_Test1
+  commentId: M:MailHole.SmtpListener.UnitTests.UnitTest1.Test1
+  fullName: MailHole.SmtpListener.UnitTests.UnitTest1.Test1()
+  nameWithType: UnitTest1.Test1()
+- uid: MailHole.SmtpListener.UnitTests.UnitTest1.Test1*
+  name: Test1
+  href: api/MailHole.SmtpListener.UnitTests.UnitTest1.html#MailHole_SmtpListener_UnitTests_UnitTest1_Test1_
+  commentId: Overload:MailHole.SmtpListener.UnitTests.UnitTest1.Test1
+  fullName: MailHole.SmtpListener.UnitTests.UnitTest1.Test1
+  nameWithType: UnitTest1.Test1

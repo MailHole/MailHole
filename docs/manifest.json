@@ -9,10 +9,10 @@
       "output": {
         ".html": {
           "relative_path": "api/MailHole.Api.Controllers.AttachementsController.html",
-          "hash": "ouQ5DW2unZegJLXGlj8Z5A=="
+          "hash": "HIF/W3jBcJzCPePB2pQ80g=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -21,10 +21,10 @@
       "output": {
         ".html": {
           "relative_path": "api/MailHole.Api.Controllers.MailsController.html",
-          "hash": "0qBYa0sJfezVqyODPNDfaQ=="
+          "hash": "/ujzAT+tR7OEK4kI++5bCg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -33,10 +33,10 @@
       "output": {
         ".html": {
           "relative_path": "api/MailHole.Api.Controllers.ReceiversController.html",
-          "hash": "iX0qtVBIkq5ZNtIUzM6kwg=="
+          "hash": "jdIqHf8YHO3OSWKioc07jg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -45,10 +45,34 @@
       "output": {
         ".html": {
           "relative_path": "api/MailHole.Api.Controllers.html",
-          "hash": "+kJoLrIM9EvYTgJGOZU2mA=="
+          "hash": "nNTE4K+4OysbkztJnH/AZQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MailHole.Api.Hangfire.HangfireAuthFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MailHole.Api.Hangfire.HangfireAuthFilter.html",
+          "hash": "nxducRWLLI1bdzNVIGi+3g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MailHole.Api.Hangfire.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MailHole.Api.Hangfire.html",
+          "hash": "m9AHMFxvjgMHbBEyIKPbJQ=="
+        }
+      },
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -57,10 +81,10 @@
       "output": {
         ".html": {
           "relative_path": "api/MailHole.Api.Models.CountResult.html",
-          "hash": "pod51h4eWJlkgr9OiKXyKQ=="
+          "hash": "Ic6A09Do0HI6rVrZZIcCdw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -69,10 +93,10 @@
       "output": {
         ".html": {
           "relative_path": "api/MailHole.Api.Models.Validation.ValidationRequest.html",
-          "hash": "eC0tXGMarDZD0fjC/EH8+w=="
+          "hash": "2now17xoNMQtEsa6JCCZIA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -81,10 +105,10 @@
       "output": {
         ".html": {
           "relative_path": "api/MailHole.Api.Models.Validation.html",
-          "hash": "4iZP7AEkVIvqcWE4Zds4Gg=="
+          "hash": "Nik3Zh8IE9s11pYDKQhdgw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -93,10 +117,10 @@
       "output": {
         ".html": {
           "relative_path": "api/MailHole.Api.Models.html",
-          "hash": "HkfizHXz0pF9lJWnduNBzA=="
+          "hash": "BaRysAgOmRwfkX9rN2ZF5A=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -105,10 +129,10 @@
       "output": {
         ".html": {
           "relative_path": "api/MailHole.Api.Program.html",
-          "hash": "BuqYTSiiIw9T2LpXZXXmiQ=="
+          "hash": "S2pw9RCtG364HPdtk30jmA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -117,10 +141,34 @@
       "output": {
         ".html": {
           "relative_path": "api/MailHole.Api.Startup.html",
-          "hash": "QdW3uCL6SQA0y5K6OEpSIg=="
+          "hash": "QgvASL+f7LLak37aiiDjtQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MailHole.Api.UnitTests.UnitTest1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MailHole.Api.UnitTests.UnitTest1.html",
+          "hash": "+D+Ycmdb58u02rxTKQVWKA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MailHole.Api.UnitTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MailHole.Api.UnitTests.html",
+          "hash": "rO/E+Tk0nKQqxylrhLXcew=="
+        }
+      },
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -129,10 +177,22 @@
       "output": {
         ".html": {
           "relative_path": "api/MailHole.Api.html",
-          "hash": "JNfM0/pK99J6uuNmvB1MWw=="
+          "hash": "UKkAkJfdnNfANUABlJEZyQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MailHole.Common.CleanupJob.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MailHole.Common.CleanupJob.html",
+          "hash": "oc7w+oRM89CYNvlDHHkcbQ=="
+        }
+      },
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -141,10 +201,10 @@
       "output": {
         ".html": {
           "relative_path": "api/MailHole.Common.Extensions.ConfigExtensions.html",
-          "hash": "R3rEWfxHjdswsopuOJ+aLQ=="
+          "hash": "6dolsVH+wkkdU6IZOfzwXw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -153,10 +213,46 @@
       "output": {
         ".html": {
           "relative_path": "api/MailHole.Common.Extensions.html",
-          "hash": "jhmnQsl0q5f1+6w9BEC+Wg=="
+          "hash": "UfqJSaQs7/H0hmh3lzy40A=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MailHole.Common.HangfireExtensions.HangfireActivator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MailHole.Common.HangfireExtensions.HangfireActivator.html",
+          "hash": "nyOjvfT2WHg1ZMGBzIPn5w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MailHole.Common.HangfireExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MailHole.Common.HangfireExtensions.html",
+          "hash": "ckyHmCClRKONVT9Hfpg8lw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MailHole.Common.MailHoleConstants.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MailHole.Common.MailHoleConstants.html",
+          "hash": "imviW2BdhwlK7/MsbPB3IA=="
+        }
+      },
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -165,10 +261,70 @@
       "output": {
         ".html": {
           "relative_path": "api/MailHole.Common.Model.AttachementInfo.html",
-          "hash": "BWxx6D77ZivtL4MqbeYOfQ=="
+          "hash": "ra9z7aJeakiwLZwgomMq3w=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MailHole.Common.Model.Options.HangfireOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MailHole.Common.Model.Options.HangfireOptions.html",
+          "hash": "cYuQWvW/DQHUIyTxUw1pAA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MailHole.Common.Model.Options.MinioOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MailHole.Common.Model.Options.MinioOptions.html",
+          "hash": "yjvabiHUbkousGVb4Y6I+g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MailHole.Common.Model.Options.RedisOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MailHole.Common.Model.Options.RedisOptions.html",
+          "hash": "4pXAjAlvFkXVgG+rD0Jl6Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MailHole.Common.Model.Options.SmtpOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MailHole.Common.Model.Options.SmtpOptions.html",
+          "hash": "bFKiKpNnNDQKE77Jp5x0nw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MailHole.Common.Model.Options.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MailHole.Common.Model.Options.html",
+          "hash": "4z2RKRPCvdZAAirpNFkRqQ=="
+        }
+      },
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -177,10 +333,10 @@
       "output": {
         ".html": {
           "relative_path": "api/MailHole.Common.Model.ReceivedMail.html",
-          "hash": "veGwdbfgsQboLWQVUJmMiw=="
+          "hash": "xLWvrICguvkKVnbzoIELhw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -189,10 +345,10 @@
       "output": {
         ".html": {
           "relative_path": "api/MailHole.Common.Model.Receiver.html",
-          "hash": "Z8ZfT6zgTUws9mE7f01qpw=="
+          "hash": "kYAdpKdgdrELocVldj8ODg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -201,10 +357,22 @@
       "output": {
         ".html": {
           "relative_path": "api/MailHole.Common.Model.html",
-          "hash": "L2cJUSAb9X5HbXdDOn/nrw=="
+          "hash": "G0Zvu20ogg8lypO/cwWFLw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MailHole.Common.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MailHole.Common.html",
+          "hash": "DJLKj9byYk4b6hyN5761bA=="
+        }
+      },
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -213,10 +381,10 @@
       "output": {
         ".html": {
           "relative_path": "api/MailHole.SmtpListener.Extensions.ModelExtensions.html",
-          "hash": "Qz047dz6gqjOObKJlpbgYA=="
+          "hash": "o0na63XIGhmHYPwAgeWDVg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -225,10 +393,58 @@
       "output": {
         ".html": {
           "relative_path": "api/MailHole.SmtpListener.Extensions.html",
-          "hash": "i6wNKA64IuV8GELmdPtLMQ=="
+          "hash": "Ftk4iRH3urFpFkKed1aRrQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MailHole.SmtpListener.IntegrationTests.RedisMinioStorageJobTest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MailHole.SmtpListener.IntegrationTests.RedisMinioStorageJobTest.html",
+          "hash": "36ipl5eTOpqvAuckqqfjcA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MailHole.SmtpListener.IntegrationTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MailHole.SmtpListener.IntegrationTests.html",
+          "hash": "U0wBKGhH6DbrFcqBlW1qhA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MailHole.SmtpListener.Jobs.RedisMinioStoreJob.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MailHole.SmtpListener.Jobs.RedisMinioStoreJob.html",
+          "hash": "IKk8ViJlewYFNC2pUmzLfA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MailHole.SmtpListener.Jobs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MailHole.SmtpListener.Jobs.html",
+          "hash": "I64r03rjy8KslWR+BAyObA=="
+        }
+      },
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -237,10 +453,10 @@
       "output": {
         ".html": {
           "relative_path": "api/MailHole.SmtpListener.Persistence.RedisMinioMailStore.html",
-          "hash": "rNZxfY8oBGScM8FaPDiBDg=="
+          "hash": "FaOWvu9SARx/J8AL/4sIcQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -249,10 +465,10 @@
       "output": {
         ".html": {
           "relative_path": "api/MailHole.SmtpListener.Persistence.html",
-          "hash": "VARJBfPVwFqYvkLzwXHSrA=="
+          "hash": "dMmVsRT73I/hBx615mNXCQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -261,10 +477,34 @@
       "output": {
         ".html": {
           "relative_path": "api/MailHole.SmtpListener.Program.html",
-          "hash": "0oPmk4vi7BS7ElgxhbkxeA=="
+          "hash": "kgcpTtH4AmX4KgIC2c/Ylg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MailHole.SmtpListener.UnitTests.UnitTest1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MailHole.SmtpListener.UnitTests.UnitTest1.html",
+          "hash": "lS31UGPVwjrasnFErdTb9A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MailHole.SmtpListener.UnitTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MailHole.SmtpListener.UnitTests.html",
+          "hash": "CIM5Mpvz9RGmfE6TUVbqRg=="
+        }
+      },
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -273,10 +513,10 @@
       "output": {
         ".html": {
           "relative_path": "api/MailHole.SmtpListener.html",
-          "hash": "O05NXckU5odOtfLjHgoQQg=="
+          "hash": "VzqR/qwjHAIMSYNSCP29MQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -285,10 +525,10 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "yN4wbwyICFhKCQUzdMDZDg=="
+          "hash": "knXLhDplMRJqiJ820Euv3w=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -297,7 +537,7 @@
       "output": {
         ".html": {
           "relative_path": "apidoc/dashboards.html",
-          "hash": "qY5Bt3UHejK9Iv8JOtf6Vw=="
+          "hash": "HdThADJQ14Gv5VVuUG9BFA=="
         }
       },
       "is_incremental": false,
@@ -324,7 +564,7 @@
           "hash": "5fvN5abSIDF815bedqJHhg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -339,7 +579,7 @@
           "hash": "z8INCoZMrdJUBiSYUs2OkA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -351,7 +591,7 @@
           "hash": "WCBe8SRfanUjO5L7V8vSmQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -363,7 +603,7 @@
           "hash": "mvQ1Kpfe7aXz7A7KCprk0A=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -375,7 +615,7 @@
           "hash": "x8Mj+z8nQadqLzGganN1pQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -387,7 +627,7 @@
           "hash": "Zt+2yi16Ia/A8ZmnFQwobA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -399,7 +639,7 @@
           "hash": "3gAgP4MI8zfI+6dgTjEhGQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -411,20 +651,29 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "XHhqTFI39r4zYOMLJaZvKw=="
+          "hash": "bYI6O6sBtYGa/OIobVnzsg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     }
   ],
   "incremental_info": [
     {
       "status": {
-        "can_incremental": true,
+        "can_incremental": false,
+        "details": "Disable incremental build by force rebuild option.",
         "incrementalPhase": "build"
       },
       "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build"
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build"
+        },
         "RestApiDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor RestApiDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -434,21 +683,13 @@
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
-        },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": true,
-          "incrementalPhase": "build"
-        },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": true,
-          "incrementalPhase": "build"
         }
       }
     },
     {
       "status": {
-        "can_incremental": true,
-        "details": "Can support incremental post processing.",
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: it's disabled.",
         "incrementalPhase": "postProcessing"
       },
       "processors": {}
