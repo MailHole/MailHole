@@ -2,7 +2,9 @@
 using System.ComponentModel.DataAnnotations;
 using System.IO;
 using System.Threading.Tasks;
+using MailHole.Api.Auth;
 using MailHole.Common.Model;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Minio;
@@ -15,16 +17,16 @@ namespace MailHole.Api.Controllers
     public class ReceiversController : Controller
     {
         private readonly ILogger<ReceiversController> _logger;
-        private readonly IDatabaseAsync _redisDb;
         private readonly MinioClient _minio;
 
-        public ReceiversController(IDatabaseAsync redisDb, ILogger<ReceiversController> logger)
+        public ReceiversController(ILogger<ReceiversController> logger, MinioClient minio)
         {
-            _redisDb = redisDb;
             _logger = logger;
+            _minio = minio;
         }
 
         [HttpGet]
+        [AuthorizeUsers]
         [Route("api/v1/{receiverAddress}")]
         [ProducesResponseType(typeof(Receiver), 200)]
         [ProducesResponseType(typeof(void), 400)]

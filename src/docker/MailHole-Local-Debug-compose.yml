@@ -13,3 +13,9 @@ services:
       - "MINIO_ACCESS_KEY=19OWL0F004QOXHLK8KN4"
       - "MINIO_SECRET_KEY=LVUTKrQgRVY2iZr9iIArdGpXqvSA4gZqxWsif8U8"
     command: server /data
+  postgres:
+    image: postgres:10.2
+    ports:
+      - 5432:5432
+    env_file:
+      - envs/Postgres.env

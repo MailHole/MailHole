@@ -369,3 +369,5 @@ __pycache__/
 codealike.json
 
 **/appsettings.baez.json
+
+**/signingCert.json

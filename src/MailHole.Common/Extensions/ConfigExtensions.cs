@@ -13,6 +13,7 @@ namespace MailHole.Common.Extensions
         private const string SmtpConfigSectionKey = "SMTP";
         private const string HangfireConfigSectionKey = "HANGFIRE";
         private const string MinioConfigSectionKey = "MINIO";
+        private const string AuthConfigSectionKey = "AUTH";
 
         public static IServiceCollection ConfigureMailHoleOptions(this IServiceCollection serviceCollection,
             IConfiguration configuration)
@@ -26,7 +27,8 @@ namespace MailHole.Common.Extensions
                     configuration.GetSection(SmtpConfigSectionKey).Bind(smtpOpts)
                 )
                 .Configure<HangfireOptions>(hangfireOpts => configuration.GetSection(HangfireConfigSectionKey).Bind(hangfireOpts))
-                .Configure<MinioOptions>(minioOpts => configuration.GetSection(MinioConfigSectionKey).Bind(minioOpts));
+                .Configure<MinioOptions>(minioOpts => configuration.GetSection(MinioConfigSectionKey).Bind(minioOpts))
+                .Configure<AuthOptions>(authOpts => configuration.GetSection(AuthConfigSectionKey).Bind(authOpts));
         }
 
         public static SmtpOptions GetSmtpOptionsOrDefault(this IServiceProvider serviceProvider)
@@ -79,6 +81,19 @@ namespace MailHole.Common.Extensions
         {
             var options = minioOptions ?? new MinioOptions();
             configuration.GetSection(MinioConfigSectionKey).Bind(options);
+            return options;
+        }
+
+        public static AuthOptions GetAuthOptionsOrDefault(this IServiceProvider serviceProvider)
+        {
+            var iOptions = serviceProvider.GetService<IOptions<AuthOptions>>();
+            return iOptions.Value ?? new AuthOptions();
+        }
+
+        public static AuthOptions BindAuthOptions(this IConfiguration configuration, AuthOptions authOptions = null)
+        {
+            var options = authOptions ?? new AuthOptions();
+            configuration.GetSection(AuthConfigSectionKey).Bind(options);
             return options;
         }
     }

@@ -33,7 +33,12 @@ ProjectSection(SolutionItems) = preProject
 	docker\envs\MailHole.SMTP-Debug.env = docker\envs\MailHole.SMTP-Debug.env
 	docker\envs\MailHole.SMTP-Release.env = docker\envs\MailHole.SMTP-Release.env
 	docker\envs\Minio.env = docker\envs\Minio.env
+	docker\envs\Postgres.env = docker\envs\Postgres.env
 EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailHole.Db", "MailHole.Db\MailHole.Db.csproj", "{230ED007-D77A-4B25-9056-E5C2DD23261A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailHole.Common.Tests", "MailHole.Common.Tests\MailHole.Common.Tests.csproj", "{F237E7D9-6E65-48F4-B6BB-B65E38574518}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -65,6 +70,14 @@ Global
 		{2451CBEF-620C-444E-8B0E-31CBE74529EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2451CBEF-620C-444E-8B0E-31CBE74529EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2451CBEF-620C-444E-8B0E-31CBE74529EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{230ED007-D77A-4B25-9056-E5C2DD23261A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{230ED007-D77A-4B25-9056-E5C2DD23261A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{230ED007-D77A-4B25-9056-E5C2DD23261A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{230ED007-D77A-4B25-9056-E5C2DD23261A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F237E7D9-6E65-48F4-B6BB-B65E38574518}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F237E7D9-6E65-48F4-B6BB-B65E38574518}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F237E7D9-6E65-48F4-B6BB-B65E38574518}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F237E7D9-6E65-48F4-B6BB-B65E38574518}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{B853411B-0F5E-46F5-A94A-4E7A25DAD85C} = {B3EAFD02-FE23-44D9-B771-9AD91E8D63C5}
@@ -74,5 +87,7 @@ Global
 		{45297C86-71EF-4EB6-A2AA-AA5F9B17BDEC} = {F0F88DAF-9AD0-4687-B86B-94B784C8A7AF}
 		{2451CBEF-620C-444E-8B0E-31CBE74529EF} = {F0F88DAF-9AD0-4687-B86B-94B784C8A7AF}
 		{98026C1A-BBDB-4D74-9B3C-4A66A6D7BEF5} = {66375F4E-8D83-4412-B929-77B15DA25AD0}
+		{230ED007-D77A-4B25-9056-E5C2DD23261A} = {B3EAFD02-FE23-44D9-B771-9AD91E8D63C5}
+		{F237E7D9-6E65-48F4-B6BB-B65E38574518} = {F0F88DAF-9AD0-4687-B86B-94B784C8A7AF}
 	EndGlobalSection
 EndGlobal

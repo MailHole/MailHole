@@ -1,0 +1,7 @@
+* [Intro](https://docs.microsoft.com/en-us/aspnet/core/security/authentication/identity?tabs=visual-studio%2Caspnetcore2x)
+* [Token based](https://stackoverflow.com/questions/30546542/token-based-authentication-in-asp-net-core-refreshed/33217340#33217340)
+* [Token based GitHub](https://github.com/mrsheepuk/ASPNETSelfCreatedTokenAuthExample/blob/master/src/TokenAuthExampleWebApplication/Startup.cs)
+* [Tokens in Console](https://stackoverflow.com/questions/40605950/create-an-user-in-a-console-net-core-application)
+* [EF Core Postgres](https://damienbod.com/2016/01/11/asp-net-5-with-postgresql-and-entity-framework-7/)
+* [ASP.NET Core 2.0 Migration](https://github.com/aspnet/Security/issues/1310)
+* [Policy-based authorization](https://docs.microsoft.com/en-us/aspnet/core/security/authorization/policies)
