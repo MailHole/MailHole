@@ -2,7 +2,7 @@
 
 ## TravisCI
 
-[![Build Status](https://travis-ci.org/baez90/MailHole.svg?branch=master)](https://travis-ci.org/baez90/MailHole)
+[![Build Status](https://travis-ci.org/MailHole/MailHole.svg?branch=master)](https://travis-ci.org/MailHole/MailHole)
 
 ## Docker
 
