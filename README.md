@@ -8,19 +8,19 @@
 
 ### API
 
-[![](https://images.microbadger.com/badges/image/baez90/mailhole-api.svg)](https://microbadger.com/images/baez90/mailhole-api "Details")
-[![](https://images.microbadger.com/badges/version/baez90/mailhole-api.svg)](https://microbadger.com/images/baez90/mailhole-api "Details")
-[![](https://images.microbadger.com/badges/commit/baez90/mailhole-api.svg)](https://microbadger.com/images/baez90/mailhole-api "Details")
+[![](https://images.microbadger.com/badges/image/mailhole/mailhole-api.svg)](https://microbadger.com/images/mailhole/mailhole-api "Details")
+[![](https://images.microbadger.com/badges/version/mailhole/mailhole-api.svg)](https://microbadger.com/images/mailhole/mailhole-api "Details")
+[![](https://images.microbadger.com/badges/commit/mailhole/mailhole-api.svg)](https://microbadger.com/images/mailhole/mailhole-api "Details")
 
 ### SMTP listener
 
-[![](https://images.microbadger.com/badges/image/baez90/mailhole-smtp.svg)](https://microbadger.com/images/baez90/mailhole-smtp "Details")
-[![](https://images.microbadger.com/badges/version/baez90/mailhole-smtp.svg)](https://microbadger.com/images/baez90/mailhole-smtp "Details")
-[![](https://images.microbadger.com/badges/commit/baez90/mailhole-smtp.svg)](https://microbadger.com/images/baez90/mailhole-smtp "Details")
+[![](https://images.microbadger.com/badges/image/mailhole/mailhole-smtp.svg)](https://microbadger.com/images/mailhole/mailhole-smtp "Details")
+[![](https://images.microbadger.com/badges/version/mailhole/mailhole-smtp.svg)](https://microbadger.com/images/mailhole/mailhole-smtp "Details")
+[![](https://images.microbadger.com/badges/commit/mailhole/mailhole-smtp.svg)](https://microbadger.com/images/mailhole/mailhole-smtp "Details")
 
 ## Docs
 
-You can find the docs at the [GitHub Pages](https://baez90.github.io/MailHole) of this project.
+You can find the docs at the [GitHub Pages](https://mailhole.github.io/MailHole) of this project.
 
 At the moment the update process of the docs is not automated so they may be out of sync at any time.
 

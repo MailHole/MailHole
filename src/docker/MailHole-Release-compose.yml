@@ -31,7 +31,7 @@ services:
       - envs/Minio.env
     command: server /data
   mailhole-api:
-    image: baez90/mailhole-api:latest
+    image: mailhole/mailhole-api:latest
     env_file:
       - envs/MailHole.API-Release.env
     depends_on:
@@ -39,7 +39,7 @@ services:
       - redis
       - minio
   mailhole-smtp:
-    image: baez90/mailhole-smtp:latest
+    image: mailhole/mailhole-smtp:latest
     env_file:
       - envs/MailHole.SMTP-Release.env
     ports:
