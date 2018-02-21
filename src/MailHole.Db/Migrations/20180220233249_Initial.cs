@@ -49,25 +49,6 @@ namespace MailHole.Db.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Mails",
-                columns: table => new
-                {
-                    MailGuid = table.Column<Guid>(nullable: false),
-                    BccJson = table.Column<string>(nullable: true),
-                    CcJson = table.Column<string>(nullable: true),
-                    HeadersJson = table.Column<string>(nullable: true),
-                    HtmlBody = table.Column<string>(nullable: true),
-                    Sender = table.Column<string>(nullable: true),
-                    Subject = table.Column<string>(nullable: true),
-                    TextBody = table.Column<string>(nullable: true),
-                    UtcReceivedTime = table.Column<DateTime>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Mails", x => x.MailGuid);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "AspNetRoleClaims",
                 columns: table => new
                 {
@@ -173,6 +154,64 @@ namespace MailHole.Db.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "Mails",
+                columns: table => new
+                {
+                    MailGuid = table.Column<Guid>(nullable: false),
+                    BccJson = table.Column<string>(nullable: true),
+                    CcJson = table.Column<string>(nullable: true),
+                    HeadersJson = table.Column<string>(nullable: true),
+                    HtmlBody = table.Column<string>(nullable: true),
+                    OwnerId = table.Column<string>(nullable: true),
+                    Sender = table.Column<string>(nullable: true),
+                    Subject = table.Column<string>(nullable: true),
+                    TextBody = table.Column<string>(nullable: true),
+                    UtcReceivedTime = table.Column<DateTime>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Mails", x => x.MailGuid);
+                    table.ForeignKey(
+                        name: "FK_Mails_AspNetUsers_OwnerId",
+                        column: x => x.OwnerId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Attachement",
+                columns: table => new
+                {
+                    AttachementGuid = table.Column<Guid>(nullable: false),
+                    Bucket = table.Column<string>(nullable: true),
+                    FileName = table.Column<string>(nullable: true),
+                    MailGuid = table.Column<Guid>(nullable: false),
+                    Md5Hash = table.Column<string>(nullable: true),
+                    MimeType = table.Column<string>(nullable: true),
+                    OwnerId = table.Column<string>(nullable: true),
+                    Sha1Hash = table.Column<string>(nullable: true),
+                    Sha256Hash = table.Column<string>(nullable: true),
+                    SizeInBytes = table.Column<long>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Attachement", x => x.AttachementGuid);
+                    table.ForeignKey(
+                        name: "FK_Attachement_Mails_MailGuid",
+                        column: x => x.MailGuid,
+                        principalTable: "Mails",
+                        principalColumn: "MailGuid",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Attachement_AspNetUsers_OwnerId",
+                        column: x => x.OwnerId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
                 table: "AspNetRoleClaims",
@@ -209,6 +248,21 @@ namespace MailHole.Db.Migrations
                 table: "AspNetUsers",
                 column: "NormalizedUserName",
                 unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Attachement_MailGuid",
+                table: "Attachement",
+                column: "MailGuid");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Attachement_OwnerId",
+                table: "Attachement",
+                column: "OwnerId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Mails_OwnerId",
+                table: "Mails",
+                column: "OwnerId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -229,10 +283,13 @@ namespace MailHole.Db.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "Mails");
+                name: "Attachement");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
+
+            migrationBuilder.DropTable(
+                name: "Mails");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");

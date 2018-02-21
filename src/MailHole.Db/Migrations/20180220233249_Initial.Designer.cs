@@ -11,7 +11,7 @@ using System;
 namespace MailHole.Db.Migrations
 {
     [DbContext(typeof(MailHoleDbContext))]
-    [Migration("20180219204827_Initial")]
+    [Migration("20180220233249_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -20,6 +20,38 @@ namespace MailHole.Db.Migrations
             modelBuilder
                 .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn)
                 .HasAnnotation("ProductVersion", "2.0.1-rtm-125");
+
+            modelBuilder.Entity("MailHole.Db.Entities.Attachement", b =>
+                {
+                    b.Property<Guid>("AttachementGuid")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Bucket");
+
+                    b.Property<string>("FileName");
+
+                    b.Property<Guid>("MailGuid");
+
+                    b.Property<string>("Md5Hash");
+
+                    b.Property<string>("MimeType");
+
+                    b.Property<string>("OwnerId");
+
+                    b.Property<string>("Sha1Hash");
+
+                    b.Property<string>("Sha256Hash");
+
+                    b.Property<long>("SizeInBytes");
+
+                    b.HasKey("AttachementGuid");
+
+                    b.HasIndex("MailGuid");
+
+                    b.HasIndex("OwnerId");
+
+                    b.ToTable("Attachement");
+                });
 
             modelBuilder.Entity("MailHole.Db.Entities.Auth.MailHoleRole", b =>
                 {
@@ -107,6 +139,8 @@ namespace MailHole.Db.Migrations
 
                     b.Property<string>("HtmlBody");
 
+                    b.Property<string>("OwnerId");
+
                     b.Property<string>("Sender");
 
                     b.Property<string>("Subject");
@@ -116,6 +150,8 @@ namespace MailHole.Db.Migrations
                     b.Property<DateTime>("UtcReceivedTime");
 
                     b.HasKey("MailGuid");
+
+                    b.HasIndex("OwnerId");
 
                     b.ToTable("Mails");
                 });
@@ -202,6 +238,25 @@ namespace MailHole.Db.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
+                });
+
+            modelBuilder.Entity("MailHole.Db.Entities.Attachement", b =>
+                {
+                    b.HasOne("MailHole.Db.Entities.Mail", "Mail")
+                        .WithMany("Attachements")
+                        .HasForeignKey("MailGuid")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("MailHole.Db.Entities.Auth.MailHoleUser", "Owner")
+                        .WithMany()
+                        .HasForeignKey("OwnerId");
+                });
+
+            modelBuilder.Entity("MailHole.Db.Entities.Mail", b =>
+                {
+                    b.HasOne("MailHole.Db.Entities.Auth.MailHoleUser", "Owner")
+                        .WithMany()
+                        .HasForeignKey("OwnerId");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

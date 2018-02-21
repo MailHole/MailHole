@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using MailHole.Db.Entities.Auth;
 
 namespace MailHole.Db.Entities
 {
@@ -35,5 +36,9 @@ namespace MailHole.Db.Entities
         
         [NotMapped]
         public IReadOnlyDictionary<string, string> Headers { get; set; }
+        
+        public MailHoleUser Owner { get; set; }
+        
+        public List<Attachement> Attachements { get; set; } = new List<Attachement>();
     }
 }

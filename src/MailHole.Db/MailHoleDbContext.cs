@@ -16,6 +16,7 @@ namespace MailHole.Db
             base.OnModelCreating(builder);
 
             builder.Entity<Mail>();
+            builder.Entity<Attachement>();
         }
 
         public DbSet<Mail> Mails { get; set; }

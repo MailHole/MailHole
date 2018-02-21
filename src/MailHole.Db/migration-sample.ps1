@@ -1,1 +1,1 @@
-dotnet ef migrations add -o Migrations\ -c MailHole.Db.MailHoleDbContext Initial
+dotnet ef migrations add -o Migrations\ --startup-project ..\MailHole.Api\ Initial
